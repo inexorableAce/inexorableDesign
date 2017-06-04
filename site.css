@@ -1,0 +1,15 @@
+html, body{
+ padding: 0;
+ margin: 0;
+ height: 100%;
+ width: 100%;
+}
+body{
+font-family: 'Roboto', sans-serif;
+font-size: 18px;
+color: #313233;
+background: #efefef;
+}
+h1,h2,h3,h4{
+color: #EB4824;
+}
