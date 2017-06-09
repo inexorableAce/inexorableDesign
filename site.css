@@ -1,4 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto');
+*{
+	box-sizing: border-box;
+}
 html, body{
  padding: 0;
  margin: 0;
@@ -9,11 +12,50 @@ body{
 font-family: 'Roboto', sans-serif;
 font-size: 18px;
 color: #313233;
+min-height: 100px;
 background: #efefef;
 }
 h1,h2,h3,h4{
 color: #EB4824;
 }
 .centerText{
- text-align: center;
+text-align: center;
+}
+.header{
+width: 100%;
+min-height: 100%;
+background: #c33e40; /* Old browsers */
+background: -moz-linear-gradient(-45deg, #f26422 1%, #ef4023 33%, #de3130 66%, #c33e40 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(-45deg, #f26422 1%, #ef4023 33%, #de3130 66%, #c33e40 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(135deg, #f26422 1%, #ef4023 33%, #de3130 66%, #c33e40 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f26422', endColorstr='#c33e40',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+background-repeat: no-repeat;
+color: #fff;
+font-size: 50px;
+text-align: center;
+}
+a.scroll{
+position: absolute;
+bottom: 50px;
+left: 50%;
+transform: translate(-50%, -50%);
+opacity: .5;
+transition: .5s;
+color: #fff;
+cursor: pointer;
+}
+a.scroll:hover{
+	opacity: 1;
+}
+.logo{
+width: 300px;
+position: absolute;
+top: calc(50% - 150px);
+left: calc(50% - 150px);
+}
+.content{
+width: 100%;
+min-height: 100%;
+padding: 100px 150px;
+background: #efefef;
 }
