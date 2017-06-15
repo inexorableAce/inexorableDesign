@@ -46,7 +46,7 @@ color: #E5382A;
 cursor: pointer;
 text-decoration: none;
 font-size: 30px;
-animation: bounce 1s ease-in-out infinite;
+/* animation: bounce 1s ease-in-out infinite; */
 }
 a.scroll:hover{
 	font-size: 32px;
@@ -92,8 +92,8 @@ hr{
 }
 @media all and (max-width: 1000px) {
 	.thumbs > img{
-	width: calc(25% - 10px);
-	margin: 0 10px 10px 0;
+	width: calc(25% - 15px);
+	margin: 0 15px 15px 0;
 	}
 	
 }
@@ -105,15 +105,15 @@ hr{
 	font-size: 20px;
 	}
 	.thumbs > img{
-	width: calc(33.33% - 10px);
-	margin: 0 10px 10px 0;
+	width: calc(33.33% - 15px);
+	margin: 0 15px 15px 0;
 	}
 	
 }
 @media all and (max-width: 550px) {
 	.thumbs > img{
-	width: calc(50% - 10px);
-	margin: 0 10px 10px 0;
+	width: calc(50% - 15px);
+	margin: 0 15px 15px 0;
 	}
 	
 }
@@ -124,7 +124,7 @@ hr{
 	}
 	.thumbs > img{
 	width: 100%;
-	margin: 0 0 10px 0;
+	margin: 0 0 15px 0;
 	}
 }
 
