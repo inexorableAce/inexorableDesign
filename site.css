@@ -46,7 +46,7 @@ color: #E5382A;
 cursor: pointer;
 text-decoration: none;
 font-size: 30px;
-/* animation: bounce 1s ease-in-out infinite; */
+animation: bounce 1s ease-in-out infinite;
 }
 a.scroll:hover{
 	font-size: 32px;
