@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400');
 *{
 	box-sizing: border-box;
 }
@@ -21,6 +21,27 @@ color: #EB4824;
 .centerText{
 text-align: center;
 }
+nav{
+position: fixed;
+top: -45px;
+left: 0;
+height: 45px;
+width: 100%;
+background: #c33e40; /* Old browsers */
+background: -moz-linear-gradient(-45deg, #f26422 1%, #ef4023 33%, #de3130 66%, #c33e40 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(-45deg, #f26422 1%, #ef4023 33%, #de3130 66%, #c33e40 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(135deg, #f26422 1%, #ef4023 33%, #de3130 66%, #c33e40 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f26422', endColorstr='#c33e40',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+background-repeat: no-repeat;
+color: #fff;
+transition: .3s;
+font-weight: 300;
+}
+nav > a{
+line-height: 45px;
+padding: 0 20px;
+cursor: pointer;
+}
 .header{
 width: 100%;
 min-height: 100%;
@@ -31,16 +52,17 @@ background: linear-gradient(135deg, #f26422 1%, #ef4023 33%, #de3130 66%, #c33e4
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f26422', endColorstr='#c33e40',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 background-repeat: no-repeat;
 color: #fff;
-font-size: 50px;
+font-size: 30px;
 text-align: center;
+font-weight: 300;
 }
 a.scroll{
 position: absolute;
-bottom: 50px;
+bottom: 2%;
 left: 50%;
 transform: translate(-50%, -50%);
 opacity: .5;
-transition: .5s;
+transition: .3s;
 color: #fff;
 cursor: pointer;
 }
@@ -48,10 +70,13 @@ a.scroll:hover{
 	opacity: 1;
 }
 .logo{
-width: 300px;
+width: 33%;
+max-width: 300px;
 position: absolute;
-top: calc(50% - 150px);
-left: calc(50% - 150px);
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+transition: .3s;
 }
 .content{
 width: 100%;
@@ -59,3 +84,18 @@ min-height: 100%;
 padding: 100px 150px;
 background: #efefef;
 }
+@media all and (max-width: 750px) {
+	.logo{
+	max-width: 150px;
+	}
+	.header{
+	font-size: 20px;
+	}
+}
+@media all and (max-width: 420px) {
+	nav{
+	top: auto;
+	bottom: -45px;
+	}
+}
+
