@@ -40,6 +40,7 @@ a.scroll{
 position: absolute;
 bottom: 2%;
 left: 50%;
+-webkit-transform: translate(-50%, -50%);
 transform: translate(-50%, -50%);
 transition: .3s;
 color: #E5382A;
@@ -57,6 +58,7 @@ max-width: 300px;
 position: absolute;
 top: 50%;
 left: 50%;
+-webkit-transform: translate(-50%, -50%);
 transform: translate(-50%, -50%);
 transition: .3s;
 }
@@ -84,9 +86,11 @@ hr{
 }
 @keyframes bounce{
 	0%{
+		-webkit-transform: translate(-50%, -50%);
 		transform: translate(-50%, -50%);
 	}
 	50%{
+		-webkit-transform: translate(-50%, -55%);
 		transform: translate(-50%, -55%);
 	}
 }
