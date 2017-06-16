@@ -41,11 +41,37 @@ text-align: center;
 }
 .header{
 width: 100%;
+display: flex;
+justify-content: center;
+align-items: center;
 min-height: 100%;
+padding: 10% 10% 10% 10%;
 background: #fff;
+color: #313233;
+font-size: 40px;
+line-height: 70px;
+}
+.textScroll{
+background: #E5382A;
 color: #fff;
-text-align: center;
+padding: 2px 5px;
+display: inline-block;
+height: 50px;
+overflow: hidden;
+vertical-align: middle;
 
+}
+.innerScroll{
+	width: 100%;
+	animation: change 10s alternate infinite;
+	animation-delay: 2s;
+	margin-top: -5px;
+}
+.innerScroll > span{
+display: block;
+width: 100%;
+text-align: center;
+line-height: 50px;
 }
 a.scroll{
 position: absolute;
@@ -56,32 +82,24 @@ transition: .3s;
 color: #E5382A;
 cursor: pointer;
 text-decoration: none;
-font-size: 30px;
+font-size: 19px;
 animation: bounce 1s ease-in-out infinite;
+line-height: 23px;
 }
 a.scroll:hover{
-	font-size: 32px;
+	font-size: 20px;
 }
 .logo{
-width: 33%;
-max-width: 300px;
-position: absolute;
-top: 50%;
-left: 50%;
--webkit-transform: translate(-50%, -50%);
-transform: translate(-50%, -50%);
+width: 80px;
+position: fixed;
+top: 20px;
+right: 30px;
 transition: .3s;
 }
 .content{
 width: 100%;
 padding: 2% 10% 8% 10%;
 background: #efefef;
-}
-hr{
-	width: 80%;
-	margin-left: 10%;
-	border-top: 1px solid #C0403B;
-	border-bottom: 1px solid #F26233;
 }
 
 .thumbs > img{
@@ -92,6 +110,7 @@ hr{
 }
 .thumbs{
 	overflow: hidden;
+	margin-top: 15px;
 }
 .socialLinks{
 	
@@ -113,19 +132,46 @@ hr{
 		bottom: 2.5%;
 	}
 }
+@keyframes change {
+	0% {
+		margin-top: -5px;
+	}
+	15%{
+		margin-top: -5px;
+	}
+	30% {
+		margin-top: -55px;
+	}
+	45%{
+		margin-top: -55px;
+	}
+	60%{
+		margin-top: -105px;
+	}
+	75% {
+		margin-top: -105px;
+	}
+	90%{
+		margin-top: -155px;
+	}
+	100% {
+		margin-top: -155px;
+	}
+}
 @media all and (max-width: 1000px) {
 	.thumbs > img{
 	width: calc(25% - 15px);
 	margin: 0 15px 15px 0;
 	}
+	.logo{
+		width: 50px;
+	}
 	
 }
 @media all and (max-width: 750px) {
 	.logo{
-	max-width: 150px;
-	}
-	.header{
-	font-size: 20px;
+	right: 10px;
+	top: 8px;
 	}
 	.thumbs > img{
 	width: calc(33.33% - 15px);
@@ -146,8 +192,14 @@ hr{
 }
 	
 }
-@media all and (max-width: 420px) {
-
+@media all and (max-width: 450px) {
+.logo{
+	width: 25px;
+	}
+	.header{
+		font-size: 25px;
+line-height: 40px;
+	}
 
 }
 
