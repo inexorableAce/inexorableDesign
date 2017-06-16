@@ -27,6 +27,14 @@ h1{
 }
 a{
 	text-decoration: none;
+	color: #C0403B;
+	transition: .3s;
+}
+a:hover{
+	color: #F26233
+}
+a:visited{
+	color: #777;
 }
 .centerText{
 text-align: center;
