@@ -76,18 +76,18 @@ line-height: 50px;
 a.scroll{
 position: absolute;
 width: 100%;
-bottom: 2%;
+bottom: 1%;
 left: 0;
 transition: .3s;
 color: #E5382A;
 cursor: pointer;
 text-decoration: none;
-font-size: 19px;
+font-size: 15px;
 animation: bounce 1s ease-in-out infinite;
 line-height: 23px;
 }
 a.scroll:hover{
-	font-size: 20px;
+	font-size: 16px;
 }
 .logo{
 width: 80px;
@@ -126,10 +126,10 @@ background: #efefef;
 }
 @keyframes bounce{
 	0%{
-		bottom: 2%;
+		bottom: 1%;
 	}
 	50%{
-		bottom: 2.5%;
+		bottom: .5%;
 	}
 }
 @keyframes change {
