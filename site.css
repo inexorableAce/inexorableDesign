@@ -177,6 +177,10 @@ background: #efefef;
 	width: calc(33.33% - 15px);
 	margin: 0 15px 15px 0;
 	}
+	.header{
+		font-size: 25px;
+		line-height: 40px;
+	}
 	
 }
 @media all and (max-width: 550px) {
@@ -196,10 +200,7 @@ background: #efefef;
 .logo{
 	width: 25px;
 	}
-	.header{
-		font-size: 25px;
-line-height: 40px;
-	}
+	
 
 }
 
