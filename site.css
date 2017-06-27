@@ -63,7 +63,7 @@ vertical-align: middle;
 }
 .innerScroll{
 	width: 100%;
-	animation: change 10s alternate infinite;
+	animation: change 8s alternate infinite;
 	animation-delay: 2s;
 	margin-top: -5px;
 }
@@ -113,7 +113,7 @@ background: #efefef;
 	margin-top: 15px;
 }
 .socialLinks{
-	
+
 }
 .social{
 	display: inline-block;
@@ -136,26 +136,20 @@ background: #efefef;
 	0% {
 		margin-top: -5px;
 	}
-	15%{
+	22%{
 		margin-top: -5px;
 	}
-	30% {
+	44% {
 		margin-top: -55px;
 	}
-	45%{
+	66%{
 		margin-top: -55px;
 	}
-	60%{
+	88%{
 		margin-top: -105px;
-	}
-	75% {
-		margin-top: -105px;
-	}
-	90%{
-		margin-top: -155px;
 	}
 	100% {
-		margin-top: -155px;
+		margin-top: -105px;
 	}
 }
 @media all and (max-width: 1000px) {
@@ -166,7 +160,7 @@ background: #efefef;
 	.logo{
 		width: 50px;
 	}
-	
+
 }
 @media all and (max-width: 750px) {
 	.logo{
@@ -181,7 +175,7 @@ background: #efefef;
 		font-size: 25px;
 		line-height: 40px;
 	}
-	
+
 }
 @media all and (max-width: 550px) {
 	.thumbs > img{
@@ -194,13 +188,12 @@ background: #efefef;
 	height: 60px;
 	margin: 0 10px 10px 0;
 }
-	
+
 }
 @media all and (max-width: 450px) {
 .logo{
 	width: 25px;
 	}
-	
+
 
 }
-
