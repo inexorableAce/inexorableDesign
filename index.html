@@ -6,16 +6,221 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta name="description" content="I am a designer that helps out with branding for streamers, content creators and everyone else."/>
 		<title>Inexorable Design</title>
-		<link href="site.css" rel="stylesheet">
 		<link rel="shortcut icon" href="lib/favicon.ico" type="image/x-icon" />
+    <style>
+    @import url('https://fonts.googleapis.com/css?family=Roboto:300,400');
+    *{
+    	box-sizing: border-box;
+    }
+    html, body{
+     padding: 0;
+     margin: 0;
+     height: 100%;
+     width: 100%;
+    }
+    body{
+    font-family: 'Roboto', sans-serif;
+    font-size: 25px;
+    color: #313233;
+    min-height: 100px;
+    background: #efefef;
+    -webkit-transition: all 0.75s cubic-bezier(0.75, 0.25, 0, 1.05);
+     transition: all 0.75s cubic-bezier(0.75, 0.25, 0, 1.05);
+     font-weight: 300;
+    }
+    h1,h2,h3,h4{
+    color: #E5382A;
+    font-weight: 300;
+    }
+    h1{
+    	font-size: 50px;
+    }
+    a{
+    	text-decoration: none;
+    	color: #ED2724;
+    }
+    a:hover{
+
+    }
+    a:visited{
+    	color: #ED2724;
+    }
+    a.slide{
+      padding: 2px 5px;
+      transition: .3s;
+    }
+    a.slide:hover{
+      background: #ED2724;
+      color: #fff;
+    }
+    .centerText{
+    text-align: center;
+    }
+    .header{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100%;
+    padding: 10% 10% 10% 10%;
+    background: #fff;
+    color: #313233;
+    font-size: 40px;
+    line-height: 70px;
+    }
+    .textScroll{
+    background: #ED2724;
+    color: #fff;
+    padding: 2px 5px;
+    display: inline-block;
+    height: 50px;
+    overflow: hidden;
+    vertical-align: middle;
+
+    }
+    .innerScroll{
+    	width: 100%;
+    	animation: change 8s alternate infinite;
+    	animation-delay: 2s;
+    	margin-top: -5px;
+    }
+    .innerScroll > span{
+    display: block;
+    width: 100%;
+    text-align: center;
+    line-height: 50px;
+    }
+    a.scroll{
+    position: absolute;
+    width: 100%;
+    bottom: 1%;
+    left: 0;
+    transition: .3s;
+    color: #ED2724;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 15px;
+    animation: bounce 1s ease-in-out infinite;
+    line-height: 23px;
+    }
+    a.scroll:hover{
+    	font-size: 16px;
+    }
+    .logo{
+    width: 80px;
+    position: fixed;
+    top: 20px;
+    right: 30px;
+    transition: .3s;
+    }
+    .content{
+    width: 100%;
+    padding: 2% 10% 8% 10%;
+    background: #efefef;
+    }
+
+    .thumbs > img{
+    	display: block;
+    	float: left;
+    	width: calc(20% - 15px);
+    	margin: 0 15px 15px 0;
+    }
+    .thumbs{
+    	overflow: hidden;
+    	margin-top: 15px;
+    }
+    .socialLinks{
+
+    }
+    .social{
+    	display: inline-block;
+    	width: 100px;
+    	height: 100px;
+    	margin: 0 25px 25px 0;
+    }
+    .social > img{
+    	width: 100%;
+    }
+    @keyframes bounce{
+    	0%{
+    		bottom: 1%;
+    	}
+    	50%{
+    		bottom: .5%;
+    	}
+    }
+    @keyframes change {
+    	0% {
+    		margin-top: -5px;
+    	}
+    	22%{
+    		margin-top: -5px;
+    	}
+    	44% {
+    		margin-top: -55px;
+    	}
+    	66%{
+    		margin-top: -55px;
+    	}
+    	88%{
+    		margin-top: -105px;
+    	}
+    	100% {
+    		margin-top: -105px;
+    	}
+    }
+    @media all and (max-width: 1000px) {
+    	.thumbs > img{
+    	width: calc(25% - 15px);
+    	margin: 0 15px 15px 0;
+    	}
+    	.logo{
+    		width: 50px;
+    	}
+
+    }
+    @media all and (max-width: 750px) {
+    	.logo{
+    	right: 10px;
+    	top: 8px;
+    	}
+    	.thumbs > img{
+    	width: calc(33.33% - 15px);
+    	margin: 0 15px 15px 0;
+    	}
+    	.header{
+    		font-size: 25px;
+    		line-height: 40px;
+    	}
+
+    }
+    @media all and (max-width: 550px) {
+    	.thumbs > img{
+    	width: calc(50% - 15px);
+    	margin: 0 15px 15px 0;
+    	}
+    	.social{
+    	display: inline-block;
+    	width: 60px;
+    	height: 60px;
+    	margin: 0 10px 10px 0;
+    }
+
+    }
+    @media all and (max-width: 450px) {
+    .logo{
+    	width: 25px;
+    	}
+    }
+    </style>
     </head>
     <body>
 		<section class="header">
-				<img class="logo" id="logo" alt="tesseract logo" src="lib/tesseract_logo.png" />
+				<img class="logo" id="logo" alt="tesseract logo" src="lib/siteTrans_ace.png" />
 				<div>
 				Hey, I'm Ace.<br>
 				I am a <div class="textScroll"><div class="innerScroll"><span>designer</span><span>streamer</span><span>gamer</span></div></div>
-				that helps out with branding for streamers, content creators and everyone else. If you need some help and like my work, <a href="https://twitter.com/InexorableAce">slide into my DMs</a>.
+				that helps out with branding for streamers, content creators and everyone else. If you need some help and like my work, <a class="slide" href="https://twitter.com/InexorableAce">slide into my DMs</a>.
 				</div>
 				<a class="scroll centerText" href="#work">SEE MY WORK<br>▽</a>
 		</section>
