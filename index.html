@@ -115,22 +115,18 @@
     }
     .content{
     width: 100%;
-    padding: 2% 10% 8% 10%;
+    padding: 2% 10% 2% 10%;
     background: #efefef;
-    }
-
-    .thumbs > img{
-    	display: block;
-    	float: left;
-    	width: calc(20% - 15px);
-    	margin: 0 15px 15px 0;
     }
     .thumbs{
     	overflow: hidden;
     	margin-top: 15px;
-    }
-    .socialLinks{
-
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		flex-flow: flex-start;
+		justify-content: flex-start;
+		align-items: flex-start;
     }
     .social{
     	display: inline-block;
@@ -141,6 +137,29 @@
     .social > img{
     	width: 100%;
     }
+	input[type=checkbox] {
+		display: none;
+	}
+	input[type=checkbox] + label {
+    	display: block;
+		float: left;
+    	width: calc(10% - 15px);
+    	margin: 0 15px 15px 0;
+		cursor: pointer;
+		transition: .5s;
+	}
+	input[type=checkbox]:checked + label {
+		width: calc(33.33% - 15px);
+	}
+	input[type=checkbox] + label > img{
+		width: 100%;
+		height: 100%;
+		box-shadow: 5px 5px 49px -12px rgba(0,0,0,.1);
+		transition: .5s;
+	}
+	input[type=checkbox] + label > img:hover{
+		box-shadow: 5px 5px 49px -12px rgba(0,0,0,.6);
+	}
     @keyframes bounce{
     	0%{
     		bottom: 1%;
@@ -170,23 +189,27 @@
     	}
     }
     @media all and (max-width: 1000px) {
-    	.thumbs > img{
-    	width: calc(25% - 15px);
-    	margin: 0 15px 15px 0;
-    	}
+    	input[type=checkbox] + label {
+			width: calc(16.65% - 15px);
+		}
+		input[type=checkbox]:checked + label {
+			width: calc(50% - 15px);
+		}
     	.logo{
     		width: 50px;
     	}
 
     }
     @media all and (max-width: 750px) {
+		input[type=checkbox] + label {
+			width: calc(33.33% - 15px);
+		}
+		input[type=checkbox]:checked + label {
+			width: calc(100% - 15px);
+		}
     	.logo{
     	right: 10px;
     	top: 8px;
-    	}
-    	.thumbs > img{
-    	width: calc(33.33% - 15px);
-    	margin: 0 15px 15px 0;
     	}
     	.header{
     		font-size: 25px;
@@ -195,10 +218,12 @@
 
     }
     @media all and (max-width: 550px) {
-    	.thumbs > img{
-    	width: calc(50% - 15px);
-    	margin: 0 15px 15px 0;
-    	}
+    	input[type=checkbox] + label {
+			width: calc(50% - 15px);
+		}
+		input[type=checkbox]:checked + label {
+			width: calc(100% - 15px);
+		}
     	.social{
     	display: inline-block;
     	width: 60px;
@@ -208,9 +233,12 @@
 
     }
     @media all and (max-width: 450px) {
-    .logo{
-    	width: 25px;
-    	}
+    input[type=checkbox] + label {
+			width: 100%;
+		}
+		input[type=checkbox]:checked + label {
+			width: 100%;
+		}
     }
     </style>
     </head>
@@ -225,28 +253,99 @@
 				<a class="scroll centerText" href="#work">SEE MY WORK<br>▽</a>
 		</section>
 		<section class="content" id="work">
+			<h2>LOGOS</h2>
 			<div class="thumbs">
-				<img src="lib/siteExports_ace.jpg" alt="inexorable logo" title="inexorableAce Brand"/>
-				<img src="lib/siteExports_bruce.jpg" alt="bg23 logo" title="BruceG23 Logo"/>
-				<img src="lib/siteExports_crayz.jpg" alt="crayz sniper logo" title="Cray-Z Sniper Logo"/>
-        <img src="lib/dimLogo.jpg" alt="DIM Logo" title="Destiny Item Manager Logo"/>
-        <img src="lib/siteExports_hov76.jpg" alt="Hov76 Logo" title="Hove76 Logo"/>
-				<img src="lib/siteExports_hovey.jpg" alt="kj hovey logo" title="KJ Hovey Minimal logo"/>
-				<img src="lib/siteExports_ichigo.jpg" alt="ichigo prime logo" title="Ichigo Prime Logo"/>
-				<img src="lib/siteExports_iftenelse.jpg" alt="if ten else logo" title="If Ten Else Logo"/>
-				<img src="lib/siteExports_kraftyy.jpg" alt="real kraftyy logo" title="Real Kraftyy Minimal Logo"/>
-				<img src="lib/siteExports_Lamer.jpg" alt="lamer logo" title="Lamer Logo"/>
-				<img src="lib/siteExports_lev.jpg" alt="levan logo" title="Levan Logo"/>
-				<img src="lib/siteExports_lupo.jpg" alt="dr lupo logo" title="Dr Lupo Minimal Logo"/>
-				<img src="lib/siteExports_mana.jpg" alt="managator logo" title="Managator Minimal Logo"/>
-				<img src="lib/siteExports_ohnoJro.jpg" alt="oh no jro logo" title="Oh No Jro Logo"/>
-				<img src="lib/siteExports_Ramon.jpg" alt="ramontep logo" title="Ramontep Logo"/>
-				<img src="lib/siteExports_ready2go.jpg" alt="ready2go logo" title="Ready2Go Corporate Resiliency Logo"/>
-				<img src="lib/siteExports_ryan.jpg" alt="ryan logo" title="Ryan Logo"/>
-				<img src="lib/siteExports_theEnorthern.jpg" alt="theenorthern logo" title="TheENorthern Logo"/>
-				<img src="lib/siteExports_Thomas.jpg" alt="thomas kigh logo" title="Thomas Kigh Logo"/>
-				<img src="lib/siteExports_tv.jpg" alt="true vanguard logo" title="True Vanguard Minimal Logo"/>
+				<input type="checkbox" id="ace">
+				<label for="ace">
+					<img src="lib/siteExports_ace.jpg" alt="inexorable logo" title="inexorableAce Brand"/>	
+				</label>
+				
+				<input type="checkbox" id="bruce">
+				<label for="bruce">
+					<img src="lib/siteExports_bruce.jpg" alt="bg23 logo" title="BruceG23 Logo"/>	
+				</label>
+				
+				<input type="checkbox" id="crayz">
+				<label for="crayz">
+					<img src="lib/siteExports_crayz.jpg" alt="crayz sniper logo" title="Cray-Z Sniper Logo"/>	
+				</label>
+				
+				<input type="checkbox" id="dim">
+				<label for="dim">
+					<img src="lib/dimLogo.jpg" alt="DIM Logo" title="Destiny Item Manager Logo"/>	
+				</label>
+				
+				<input type="checkbox" id="hov">
+				<label for="hov">
+					<img src="lib/siteExports_hov76.jpg" alt="Hov76 Logo" title="Hove76 Logo"/>	
+				</label>
+				
+				<input type="checkbox" id="ichi">
+				<label for="ichi">
+					<img src="lib/siteExports_ichigo.jpg" alt="ichigo prime logo" title="Ichigo Prime Logo"/>
+				</label>
+				
+				<input type="checkbox" id="iften">
+				<label for="iften">
+					<img src="lib/siteExports_iftenelse.jpg" alt="if ten else logo" title="If Ten Else Logo"/>
+				</label>
+				
+				<input type="checkbox" id="kraft">
+				<label for="kraft">
+					<img src="lib/siteExports_kraftyy.jpg" alt="real kraftyy logo" title="Real Kraftyy Minimal Logo"/>
+				</label>
+				
+				<input type="checkbox" id="lamer">
+				<label for="lamer">
+					<img src="lib/siteExports_Lamer.jpg" alt="lamer logo" title="Lamer Logo"/>
+				</label>
+				
+				<input type="checkbox" id="lev">
+				<label for="lev">
+					<img src="lib/siteExports_lev.jpg" alt="levan logo" title="Levan Logo"/>
+				</label>
+				
+				
+				<input type="checkbox" id="lupo">
+				<label for="lupo">
+					<img src="lib/siteExports_lupo.jpg" alt="dr lupo logo" title="Dr Lupo Minimal Logo"/>
+				</label>
+				
+				<input type="checkbox" id="jro">
+				<label for="jro">
+					<img src="lib/siteExports_ohnoJro.jpg" alt="oh no jro logo" title="Oh No Jro Logo"/>
+				</label>
+				
+				<input type="checkbox" id="ramon">
+				<label for="ramon">
+					<img src="lib/siteExports_Ramon.jpg" alt="ramontep logo" title="Ramontep Logo"/>
+				</label>
+				
+				<input type="checkbox" id="ready">
+				<label for="ready">
+					<img src="lib/siteExports_ready2go.jpg" alt="ready2go logo" title="Ready2Go Corporate Resiliency Logo"/>
+				</label>
+		
+				<input type="checkbox" id="ryan">
+				<label for="ryan">
+					<img src="lib/siteExports_ryan.jpg" alt="ryan logo" title="Ryan Logo"/>
+				</label>
+				
+				<input type="checkbox" id="tan">
+				<label for="tan">
+					<img src="lib/siteExports_theEnorthern.jpg" alt="theenorthern logo" title="TheENorthern Logo"/>
+				</label>
+				
+				<input type="checkbox" id="thomas">
+				<label for="thomas">
+					<img src="lib/siteExports_Thomas.jpg" alt="thomas kigh logo" title="Thomas Kigh Logo"/>
+				</label>
+				
 			</div>
+		</section>
+		<section class="content" id="Brands">
+		<h2>FULL BRANDS</h2>
+		<p>I do these too, will add some soon!</p>
 		</section>
 		<section class="content" id="contact">
 			<div class="socialLinks">
@@ -261,7 +360,6 @@
 				</a>
 			</div>
 		</section>
-		<script src="scrollToAnchor.min.js"></script>
 		<script>
 		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
