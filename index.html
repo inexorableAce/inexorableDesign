@@ -139,7 +139,7 @@
 	input[type=checkbox] {
 		display: none;
 	}
-	input[type=checkbox] + label {
+	.small input[type=checkbox] + label {
     	display: block;
 		float: left;
     	width: calc(10% - 15px);
@@ -147,8 +147,19 @@
 		cursor: pointer;
 		transition: .5s;
 	}
-	input[type=checkbox]:checked + label {
+	.small input[type=checkbox]:checked + label {
 		width: calc(33.33% - 15px);
+	}
+	.large input[type=checkbox] + label {
+    	display: block;
+		float: left;
+    	width: calc(50% - 15px);
+    	margin: 0 15px 15px 0;
+		cursor: pointer;
+		transition: .5s;
+	}
+	.large input[type=checkbox]:checked + label {
+		width: calc(100% - 15px);
 	}
 	input[type=checkbox] + label > img{
 		width: 100%;
@@ -188,10 +199,10 @@
     	}
     }
     @media all and (max-width: 1000px) {
-    	input[type=checkbox] + label {
+    	.small input[type=checkbox] + label {
 			width: calc(16.65% - 15px);
 		}
-		input[type=checkbox]:checked + label {
+		.small input[type=checkbox]:checked + label {
 			width: calc(50% - 15px);
 		}
     	.logo{
@@ -200,10 +211,13 @@
 
     }
     @media all and (max-width: 750px) {
-		input[type=checkbox] + label {
+		.large input[type=checkbox] + label {
+			width: calc(100% - 15px);
+		}
+		.small input[type=checkbox] + label {
 			width: calc(33.33% - 15px);
 		}
-		input[type=checkbox]:checked + label {
+		.small input[type=checkbox]:checked + label {
 			width: calc(100% - 15px);
 		}
     	.logo{
@@ -217,10 +231,10 @@
 
     }
     @media all and (max-width: 550px) {
-    	input[type=checkbox] + label {
+    	.small input[type=checkbox] + label {
 			width: calc(50% - 15px);
 		}
-		input[type=checkbox]:checked + label {
+		.small input[type=checkbox]:checked + label {
 			width: calc(100% - 15px);
 		}
     	.social{
@@ -232,12 +246,7 @@
 
     }
     @media all and (max-width: 450px) {
-    input[type=checkbox] + label {
-			width: 100%;
-		}
-		input[type=checkbox]:checked + label {
-			width: 100%;
-		}
+
     }
     </style>
     </head>
@@ -253,7 +262,7 @@
 		</section>
 		<section class="content" id="work">
 			<h2>LOGOS</h2>
-			<div class="thumbs">
+			<div class="thumbs small">
 				<input type="checkbox" id="ace">
 				<label for="ace">
 					<img src="lib/siteExports_ace.jpg" alt="inexorable logo" title="inexorableAce Brand"/>	
@@ -287,6 +296,12 @@
 				<input type="checkbox" id="iften">
 				<label for="iften">
 					<img src="lib/siteExports_iftenelse.jpg" alt="if ten else logo" title="If Ten Else Logo"/>
+				</label>
+				
+				
+				<input type="checkbox" id="kjhovey">
+				<label for="kjhovey">
+					<img src="lib/kjhovey_logoFilledBack.png" alt="kjhoveyy logo" title="kjhovey Logo"/>
 				</label>
 				
 				<input type="checkbox" id="kraft">
@@ -345,12 +360,54 @@
 		
 		<section class="content" id="Brands">
 		<h2>FULL BRANDS</h2>
-		<p>I do these too, will add some soon!</p>
+			<div class="thumbs large">
+				<input type="checkbox" id="acefull">
+				<label for="acefull">
+					<img src="lib/acepack-01.png" alt="InexorableAce Brand" title="InexorableAce Brand"/>
+				</label>
+				
+				<input type="checkbox" id="hoveyFull">
+				<label for="hoveyFull">
+					<img src="lib/hoveyBrandPack.jpg" alt="kjhovey Brand" title="kjhovey Brand"/>
+				</label>
+			</div>
+				
 		</section>
 		
 		<section class="content" id="Overlays">
-		<h2>OVERLAYS</h2>
-		<p>I do these too, will add some soon!</p>
+		<h2>OVERLAYS & SCREENS</h2>
+			<div class="thumbs large">
+					<input type="checkbox" id="hoverlay">
+					<label for="hoverlay">
+					<img src="lib/hoverlay.gif" alt="Overlay for kjhovey" title="Overlay for kjhovey"/>
+					</label>
+					
+					<input type="checkbox" id="Starting">
+					<label for="Starting">
+					<img src="lib/startsoon.gif" alt="Ace Starting" title="Ace Starting"/>
+					</label>
+			</div>
+			<p>I also have made a lot of overlays that can be triggered by chat using deepbot. 
+			These are interactive overlays that chatters can trigger with a command in twitch chat.</p>
+			<div class="thumbs large">
+					<input type="checkbox" id="pokemon">
+					<label for="pokemon">
+					!pokemon<br>
+					<img src="lib/pokemon.gif" alt="!pokemon" title="!pokemon"/>
+					</label>
+					
+					<input type="checkbox" id="love">
+					<label for="love">
+					!love<br>
+					<img src="lib/love.gif" alt="!love" title="!love"/>
+					</label>
+					
+					<input type="checkbox" id="fire">
+					<label for="fire">
+					!fire<br>
+					<img src="lib/fire.gif" alt="!fire" title="!fire"/>
+					</label>
+			</div>
 		</section>
 		<section class="content" id="contact">
 			<div class="socialLinks">
