@@ -29,7 +29,10 @@
      font-weight: 300;
     }
     h1,h2,h3,h4{
-    color: #E5382A;
+    color: #E71378;
+	background: -webkit-linear-gradient(-45deg, rgba(234,75,37,1) 0%,rgba(231,19,120,1) 100%); /* Chrome10-25,Safari5.1-6 */
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
     font-weight: 300;
     }
     h1{
@@ -37,21 +40,33 @@
     }
     a{
     	text-decoration: none;
-    	color: #ED2724;
+    	color: #E71378;
+		border-bottom: 1px solid #E71378;
+		transition: .3s;
     }
     a:hover{
-
+		color: #fff !important;
+		background: rgb(234,75,37); /* Old browsers */
+	background: -moz-linear-gradient(-45deg, rgba(234,75,37,1) 0%, rgba(231,19,120,1) 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(-45deg, rgba(234,75,37,1) 0%,rgba(231,19,120,1) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(135deg, rgba(234,75,37,1) 0%,rgba(231,19,120,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ea4b25', endColorstr='#e71378',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+		
     }
     a:visited{
-    	color: #ED2724;
+    	text-decoration: none;
+    	color: #E71378;
+		border-bottom: 1px solid #E71378;
     }
     a.slide{
+	  color: #efefef;
       padding: 2px 5px;
       transition: .3s;
+	  border-bottom: 1px solid #fff;
     }
     a.slide:hover{
-      background: #ED2724;
-      color: #fff;
+      background: #fff;
+      color: #E71378 !important;
     }
     .centerText{
     text-align: center;
@@ -63,14 +78,18 @@
     align-items: center;
     min-height: 100%;
     padding: 10% 10% 10% 10%;
-    background: #fff;
-    color: #313233;
+    background: rgb(234,75,37); /* Old browsers */
+	background: -moz-linear-gradient(-45deg, rgba(234,75,37,1) 0%, rgba(231,19,120,1) 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(-45deg, rgba(234,75,37,1) 0%,rgba(231,19,120,1) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(135deg, rgba(234,75,37,1) 0%,rgba(231,19,120,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ea4b25', endColorstr='#e71378',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+    color: #fff;
     font-size: 40px;
     line-height: 70px;
     }
     .textScroll{
-    background: #ED2724;
-    color: #fff;
+    background: #fff;
+    color: #E71378;
     padding: 2px 5px;
     display: inline-block;
     height: 50px;
@@ -96,21 +115,23 @@
     bottom: 1%;
     left: 0;
     transition: .3s;
-    color: #ED2724;
+    color: #fff;
     cursor: pointer;
     text-decoration: none;
     font-size: 15px;
     animation: bounce 1s ease-in-out infinite;
     line-height: 23px;
+	border: none;
     }
     a.scroll:hover{
     	font-size: 16px;
+		background: transparent;
     }
     .logo{
-    width: 80px;
+    width: 150px;
     position: fixed;
-    top: 20px;
-    right: 30px;
+    top: 0px;
+    right: 0px;
     transition: .3s;
     }
     .content{
@@ -129,9 +150,8 @@
     }
     .social{
     	display: inline-block;
-    	width: 100px;
-    	height: 100px;
     	margin: 0 25px 25px 0;
+		padding: 8px;
     }
     .social > img{
     	width: 100%;
@@ -206,7 +226,7 @@
 			width: calc(50% - 15px);
 		}
     	.logo{
-    		width: 50px;
+    		width: 100px;
     	}
 
     }
@@ -221,8 +241,8 @@
 			width: calc(100% - 15px);
 		}
     	.logo{
-    	right: 10px;
-    	top: 8px;
+    	right: 0px;
+    	top: 0px;
     	}
     	.header{
     		font-size: 25px;
@@ -263,10 +283,36 @@
 		<section class="content" id="work">
 			<h2>LOGOS</h2>
 			<div class="thumbs small">
-				<input type="checkbox" id="ace">
-				<label for="ace">
-					<img src="lib/siteExports_ace.jpg" alt="inexorable logo" title="inexorableAce Brand"/>	
+				<input type="checkbox" id="destinyets">
+				<label for="destinyets">
+					<img src="lib/DestinySets.png" alt="Destiny Sets logo" title="Destiny Sets Brand"/>	
 				</label>
+				
+				<input type="checkbox" id="GH">
+				<label for="GH">
+					<img src="lib/G&H.png" alt="G&H logo" title="G&H Logo"/>
+				</label>
+				
+				<input type="checkbox" id="kjhovey">
+				<label for="kjhovey">
+					<img src="lib/kjhovey_logoFilledBack.png" alt="kjhoveyy logo" title="kjhovey Logo"/>
+				</label>
+				
+				<input type="checkbox" id="dim">
+				<label for="dim">
+					<img src="lib/dimLogo.jpg" alt="DIM Logo" title="Destiny Item Manager Logo"/>	
+				</label>
+				
+				<input type="checkbox" id="hostility">
+				<label for="hostility">
+					<img src="lib/hostility.png" alt="hostility Logo" title="hostility Logo"/>	
+				</label>
+				
+				<input type="checkbox" id="defrey">
+				<label for="defrey">
+					<img src="lib/defrey.png" alt="defreylee Logo" title="defreylee Logo"/>	
+				</label>
+				
 				
 				<input type="checkbox" id="bruce">
 				<label for="bruce">
@@ -278,10 +324,7 @@
 					<img src="lib/siteExports_crayz.jpg" alt="crayz sniper logo" title="Cray-Z Sniper Logo"/>	
 				</label>
 				
-				<input type="checkbox" id="dim">
-				<label for="dim">
-					<img src="lib/dimLogo.jpg" alt="DIM Logo" title="Destiny Item Manager Logo"/>	
-				</label>
+				
 				
 				<input type="checkbox" id="hov">
 				<label for="hov">
@@ -299,10 +342,7 @@
 				</label>
 				
 				
-				<input type="checkbox" id="kjhovey">
-				<label for="kjhovey">
-					<img src="lib/kjhovey_logoFilledBack.png" alt="kjhoveyy logo" title="kjhovey Logo"/>
-				</label>
+				
 				
 				<input type="checkbox" id="kraft">
 				<label for="kraft">
@@ -325,10 +365,6 @@
 					<img src="lib/siteExports_lupo.jpg" alt="dr lupo logo" title="Dr Lupo Minimal Logo"/>
 				</label>
 				
-				<input type="checkbox" id="jro">
-				<label for="jro">
-					<img src="lib/siteExports_ohnoJro.jpg" alt="oh no jro logo" title="Oh No Jro Logo"/>
-				</label>
 				
 				<input type="checkbox" id="ramon">
 				<label for="ramon">
@@ -361,10 +397,6 @@
 		<section class="content" id="Brands">
 		<h2>FULL BRANDS</h2>
 			<div class="thumbs large">
-				<input type="checkbox" id="acefull">
-				<label for="acefull">
-					<img src="lib/acepack-01.png" alt="InexorableAce Brand" title="InexorableAce Brand"/>
-				</label>
 				
 				<input type="checkbox" id="hoveyFull">
 				<label for="hoveyFull">
@@ -412,13 +444,13 @@
 		<section class="content" id="contact">
 			<div class="socialLinks">
 				<a class="social" href="https://twitter.com/InexorableAce">
-					<img src="lib/siteExports_twitter.jpg" />
+					Twitter
 				</a>
 				<a class="social" href="https://www.twitch.tv/inexorableace">
-					<img src="lib/siteExports_twitch.jpg" />
+					Twitch
 				</a>
 				<a class="social" href="mailto:inexace@gmail.com">
-					<img src="lib/siteExports_mail.jpg" />
+					Email
 				</a>
 			</div>
 		</section>
