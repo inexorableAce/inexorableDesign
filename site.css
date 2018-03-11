@@ -84,33 +84,38 @@ p{
     height: 100%;
 	box-sizing: border-box;
 	display: block; 
+	background: -moz-linear-gradient(top, rgba(0,51,84,1) 0%, rgba(11,13,58,1) 100%);
+    background: -webkit-linear-gradient(top, rgba(0,51,84,1) 0%,rgba(11,13,58,1) 100%);
+    background: linear-gradient(to bottom, rgba(0,51,84,1) 0%,rgba(11,13,58,1) 100%);
+    background-attachment: fixed;
+	color: #fff;
 }
 #heroLogo svg{
 	width: 200px;
 	vertical-align: middle;
 }
-.morning{
+#heroSvg.morning, nav.morning{
     background: -moz-linear-gradient(top, rgba(158,232,250,1) 0%, rgba(255,250,216,1) 100%);
     background: -webkit-linear-gradient(top, rgba(158,232,250,1) 0%,rgba(255,250,216,1) 100%);
     background: linear-gradient(to bottom, rgba(158,232,250,1) 0%,rgba(255,250,216,1) 100%);
     background-attachment: fixed;
 	color: #313233;
 }
-.day{
+#heroSvg.day, nav.day{
     background: -moz-linear-gradient(top, rgba(5,171,224,1) 0%, rgba(83,203,241,1) 46%, rgba(135,224,253,1) 99%); 
     background: -webkit-linear-gradient(top, rgba(5,171,224,1) 0%,rgba(83,203,241,1) 46%,rgba(135,224,253,1) 99%);
     background: linear-gradient(to bottom, rgba(5,171,224,1) 0%,rgba(83,203,241,1) 46%,rgba(135,224,253,1) 99%);
     background-attachment: fixed;
 	color: #fff;
 }
-.sunset{
+#heroSvg.sunset, nav.sunset{
 	background: -moz-linear-gradient(top, rgba(11,13,58,1) 0%, rgba(229,43,161,1) 49%, rgba(255,221,137,1) 100%);
 	background: -webkit-linear-gradient(top, rgba(11,13,58,1) 0%,rgba(229,43,161,1) 49%,rgba(255,221,137,1) 100%); 
 	background: linear-gradient(to bottom, rgba(11,13,58,1) 0%,rgba(229,43,161,1) 49%,rgba(255,221,137,1) 100%);
 	background-attachment: fixed;
 	color: #fff;
 }
-.night{
+#heroSvg.night, nav.night{
 	background: -moz-linear-gradient(top, rgba(0,51,84,1) 0%, rgba(11,13,58,1) 100%);
     background: -webkit-linear-gradient(top, rgba(0,51,84,1) 0%,rgba(11,13,58,1) 100%);
     background: linear-gradient(to bottom, rgba(0,51,84,1) 0%,rgba(11,13,58,1) 100%);
@@ -136,6 +141,11 @@ nav{
 	color: #fff;
 	fill: #fff;
 	transition: .5s;
+	background: -moz-linear-gradient(top, rgba(0,51,84,1) 0%, rgba(11,13,58,1) 100%);
+    background: -webkit-linear-gradient(top, rgba(0,51,84,1) 0%,rgba(11,13,58,1) 100%);
+    background: linear-gradient(to bottom, rgba(0,51,84,1) 0%,rgba(11,13,58,1) 100%);
+    background-attachment: fixed;
+	color: #fff;
 }
 nav a{
 	color: #fff;
