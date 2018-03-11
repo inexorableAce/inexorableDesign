@@ -150,7 +150,7 @@ nav a{
 	cursor: pointer;
 	
 }
-.dark{
+.dark, .dark a{
 	color: #313233 !important;
 	fill: #313233 !important;
 }
