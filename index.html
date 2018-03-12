@@ -17,20 +17,20 @@
     </style>
     </head>
     <body>
+	<div id="transition"></div>
 		<nav>
-			<a id="menuLogo">
+			<a id="menuLogo" href="#ID">
 				<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 500 500" enable-background="new 0 0 500 500" xml:space="preserve">
 					<path d="M250.001,131.673l102.44,59.145v118.29l-102.44,59.145L147.56,309.107v-118.29L250.001,131.673 M250.001,108.579l-10,5.774L137.56,173.498l-10,5.773v11.547v118.29v11.547l10,5.773l102.441,59.145l10,5.773l10-5.773 l102.44-59.145l10-5.773v-11.547v-118.29v-11.547l-10-5.773l-102.44-59.145L250.001,108.579L250.001,108.579z"/>
 					<polygon points="203.435,223.078 250,196.193 296.565,223.078 296.565,276.847 250,303.731 203.435,276.847 "/>
 				</svg> 
-				i.d
 			</a>
-			<!-- <a>about</a>
-			<a>work</a>
-			<a>contact</a> -->
+			<a href="#about">about</a>
+			<!--<a>work</a>
+			<a>contact</a>-->
 		</nav>
 		
-		<section class="hero">
+		<section class="hero" id="ID">
 			<div id="heroLogo">
 				<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 500 500" enable-background="new 0 0 500 500" xml:space="preserve">
 					<path d="M250.001,131.673l102.44,59.145v118.29l-102.44,59.145L147.56,309.107v-118.29L250.001,131.673 M250.001,108.579l-10,5.774L137.56,173.498l-10,5.773v11.547v118.29v11.547l10,5.773l102.441,59.145l10,5.773l10-5.773 l102.44-59.145l10-5.773v-11.547v-118.29v-11.547l-10-5.773l-102.44-59.145L250.001,108.579L250.001,108.579z"/>
@@ -38,7 +38,7 @@
 				</svg> 
 				inexorable.design
 			</div>
-			<svg id="heroSvg" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="100%" height="100%" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMax slice">
+			<svg id="heroSvg" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="100%" height="100%" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMax slice" style="overflow: hidden;">
 				<defs>
 					<path id="wave" fill="#FFF" d="M-363.852,502.589c0,0,236.988-41.997,505.475,0s371.981,38.998,575.971,0s293.985-39.278,505.474,5.859s493.475,48.368,716.963-4.995v560.106H-363.852V502.589z" />
 				</defs>
@@ -56,59 +56,69 @@
 			</svg>
 		</section>
 		
-		<section class="contentContainer">
-			<h1>Coming Soon...</h1>
-			<p style="padding-bottom: 600px;">
-			Stay in touch on Twitter. <a target="_blank" href="https://twitter.com/InexorableAce">@inexorableAce</a> 
+
+		<section class="contentContainer" id="about">
+			<h1>About inexorable.design</h1>
+			<p>
+			Hi, I'm Ace. As a designer I'm a problem solver at heart. I aim to deliver meaniful experiences and interactions, regardless of what the work may be. 
+			My focus as a designer has always been to make people better by thinking of the products I create as extentions of the people that use them.
 			</p>
-
-
+			<p style="padding-bottom: 600px;">
+				More to come. Stay in touch on Twitter. <a target="_blank" href="https://twitter.com/InexorableAce">@inexorableAce</a> 
+			</p>			
 		</section>
+		
+		
 
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 		<script>
-			$('nav').css("opacity",  0);
-		
+			// RESET DEFAULT STYLES IF JS IS ENABLED
+			$('#heroLogo').css('position', 'fixed');
+			
+			// TIME OF DAY STLYES
 			var hour = new Date().getHours();
+			hour = 0
 			
 			// IF TIME BETWEEN 12PM and 6PM
 			if (hour >= 12 && hour < 18){
-			  $('#heroSvg').addClass('day');
-			  $('nav').addClass('day');
+			  $('#heroSvg, nav').addClass('day');
+
 			}
 			// IF TIME BETWEEN 6PM and 9PM
 			else if(hour >= 18 && hour < 21){
-			  $('#heroSvg').addClass('sunset');
-			  $('nav').addClass('sunset');
+			  $('#heroSvg, nav').addClass('sunset');
+
 			}
 			// IF TIME BETWEEN 9PM and 12AM
 			else if(hour >= 21 && hour <= 23){
-			  $('#heroSvg').addClass('night');
-			  $('nav').addClass('night');
+			  $('#heroSvg, nav').addClass('night');
 			}
 			else if(hour >= 0 && hour < 6){
-			  $('#heroSvg').addClass('night');
-			  $('nav').addClass('night');
+			  $('#heroSvg, nav').addClass('night');
 			}
 			else if(hour >= 6 && hour < 12){
-			  $('#heroSvg').addClass('morning');
-			  $('#heroLogo').addClass('dark');
-			  $('nav').addClass('morning').addClass('dark');
+			  $('#heroSvg, nav').addClass('morning');
+			  $('#heroLogo, nav, nav svg').addClass('dark');
 			}
 			
+			// FADE IN MENU ON SCROLL
 			$(window).scroll(function(){
-			
-			var waveTop = $('#heroSvg g').offset().top;
+
 			var windowTop = $(window).scrollTop();
-			var fadeVar = waveTop - windowTop - 80;
+		
+			$('#heroLogo').css('opacity', 1 - windowTop / 300)
 			
-			console.log(fadeVar)
-			if (fadeVar >= 0){
-				$('nav').css("opacity",  0);
-			}else{
-				$('nav').css("opacity", 1);		
-			}
+
 			
+			
+			});
+			
+			$("nav a").click(function(e) {
+				e.preventDefault();
+				$("#transition").animate({ opacity: 1 }, 300);
+				$("#transition").animate({ opacity: 0 }, 300);
+				$("html, body").delay(300).animate({ scrollTop: $($(this).attr('href')).offset().top }, 0);
+				return true;
 			});
 
 		

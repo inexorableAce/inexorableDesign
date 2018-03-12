@@ -11,7 +11,6 @@ html {
 }
 body {
 	min-height: 100%;
-	position: relative;
 	font-size: 2em;
 	line-height: 1.6;
 	font-weight: 400;
@@ -19,8 +18,19 @@ body {
 	color: #313233;
 	background: #fff;
 }
+#transition{
+	position: fixed;
+	top: 60px;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	pointer-events: none;
+	background: #fff;
+	opacity: 0;
+	z-index: 9999;
+}
 /* TYPOGRAPHY */
-a, a:visited{
+.contentContainer a, .contentContainer a:visited{
 	color: #313233;
 	text-decoration: none;
 	font-weight: bold;
@@ -69,11 +79,14 @@ p{
 	text-align: center;
 	color: #fff;
 	fill: #fff;
+	pointer-events: none;
 }
 
 @media (max-width: 800px) {
  #heroLogo{
 	font-size: 1.8em;
+	transition: .8s;
+	opacity: 1;
 }
 }
 #heroSvg {
@@ -90,43 +103,59 @@ p{
     background-attachment: fixed;
 	color: #fff;
 }
+#bodySvg {
+	position: absolute;
+	top: -73%;
+	left: 0;
+    width: 100%;
+    height: 100%;
+	box-sizing: border-box;
+	display: block; 
+	background: transparent;
+}
+
 #heroLogo svg{
 	width: 200px;
 	vertical-align: middle;
 }
-#heroSvg.morning, nav.morning{
+#heroSvg.morning, nav.morning, #transition.morning{
     background: -moz-linear-gradient(top, rgba(158,232,250,1) 0%, rgba(255,250,216,1) 100%);
     background: -webkit-linear-gradient(top, rgba(158,232,250,1) 0%,rgba(255,250,216,1) 100%);
     background: linear-gradient(to bottom, rgba(158,232,250,1) 0%,rgba(255,250,216,1) 100%);
     background-attachment: fixed;
 	color: #313233;
 }
-#heroSvg.day, nav.day{
+#heroSvg.day, nav.day, #transition.day{
     background: -moz-linear-gradient(top, rgba(5,171,224,1) 0%, rgba(83,203,241,1) 46%, rgba(135,224,253,1) 99%); 
     background: -webkit-linear-gradient(top, rgba(5,171,224,1) 0%,rgba(83,203,241,1) 46%,rgba(135,224,253,1) 99%);
     background: linear-gradient(to bottom, rgba(5,171,224,1) 0%,rgba(83,203,241,1) 46%,rgba(135,224,253,1) 99%);
     background-attachment: fixed;
 	color: #fff;
 }
-#heroSvg.sunset, nav.sunset{
+#heroSvg.sunset, nav.sunset, #transition.sunset{
 	background: -moz-linear-gradient(top, rgba(11,13,58,1) 0%, rgba(229,43,161,1) 49%, rgba(255,221,137,1) 100%);
 	background: -webkit-linear-gradient(top, rgba(11,13,58,1) 0%,rgba(229,43,161,1) 49%,rgba(255,221,137,1) 100%); 
 	background: linear-gradient(to bottom, rgba(11,13,58,1) 0%,rgba(229,43,161,1) 49%,rgba(255,221,137,1) 100%);
 	background-attachment: fixed;
 	color: #fff;
 }
-#heroSvg.night, nav.night{
+#heroSvg.night, nav.night, #transition.night{
 	background: -moz-linear-gradient(top, rgba(0,51,84,1) 0%, rgba(11,13,58,1) 100%);
     background: -webkit-linear-gradient(top, rgba(0,51,84,1) 0%,rgba(11,13,58,1) 100%);
     background: linear-gradient(to bottom, rgba(0,51,84,1) 0%,rgba(11,13,58,1) 100%);
     background-attachment: fixed;
 	color: #fff;
 }
+.container{
+	width: 100%;
+	position: relative;
+}
 .contentContainer{
 	max-width: 900px;
 	width: 100%;
 	margin: 0 auto;
-	padding: 0 20px;
+	padding: 70px 20px 0px;
+	position: relative;
 }
 
 /* NAVIGATION */
@@ -140,7 +169,6 @@ nav{
 	font-family: 'Unica One';
 	color: #fff;
 	fill: #fff;
-	transition: .5s;
 	background: -moz-linear-gradient(top, rgba(0,51,84,1) 0%, rgba(11,13,58,1) 100%);
     background: -webkit-linear-gradient(top, rgba(0,51,84,1) 0%,rgba(11,13,58,1) 100%);
     background: linear-gradient(to bottom, rgba(0,51,84,1) 0%,rgba(11,13,58,1) 100%);
@@ -154,11 +182,12 @@ nav a{
   height: 60px;
   width: 60px;
   vertical-align: middle;
+  fill: #fff;
 }
 nav a{
-	padding: 0 25px;
+	padding: 0 0 0 30px;
 	cursor: pointer;
-	
+	text-decoration: none;
 }
 .dark, .dark a{
 	color: #313233 !important;
