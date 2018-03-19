@@ -280,7 +280,7 @@ nav a{
 		opacity: 1;
 		margin-left: 0px;
 	}
-	.outerCoverImg{
+	a.outerCoverImg{
 		width: 50%;
 	}
 	.outerEmbed{
@@ -294,7 +294,7 @@ nav a{
 	}
 }
 @media (max-width: 450px) {
-	.outerCoverImg{
+	a.outerCoverImg{
 		width: 100%;
 	}
 }
