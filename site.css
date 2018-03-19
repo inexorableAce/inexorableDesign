@@ -38,6 +38,27 @@ body {
 label{
 	font-family: 'Unica One'
 }
+.footer{
+	height: 300px;
+	margin-top: 200px;
+	background: -moz-linear-gradient(top, rgba(0,51,84,1) 0%, rgba(11,13,58,1) 100%);
+    background: -webkit-linear-gradient(top, rgba(0,51,84,1) 0%,rgba(11,13,58,1) 100%);
+    background: linear-gradient(to bottom, rgba(0,51,84,1) 0%,rgba(11,13,58,1) 100%);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 13px;
+	padding: 40px;
+}
+#contact{
+	font-size: 30px;
+	text-align: center;
+}
+#contact a{
+	padding: 0 10px;
+	font-family: 'Unica One';
+	font-size: 30px;
+}
 /* TYPOGRAPHY */
 .contentContainer a, .contentContainer a:visited{
 	color: #313233;
@@ -133,28 +154,28 @@ p{
 	vertical-align: middle;
 	
 }
-#heroSvg.morning, nav.morning, #transition.morning{
+#heroSvg.morning, nav.morning, #transition.morning, .footer.morning{
     background: -moz-linear-gradient(top, rgba(158,232,250,1) 0%, rgba(255,250,216,1) 100%);
     background: -webkit-linear-gradient(top, rgba(158,232,250,1) 0%,rgba(255,250,216,1) 100%);
     background: linear-gradient(to bottom, rgba(158,232,250,1) 0%,rgba(255,250,216,1) 100%);
     background-attachment: fixed;
 	color: #313233;
 }
-#heroSvg.day, nav.day, #transition.day{
+#heroSvg.day, nav.day, #transition.day, .footer.day{
     background: -moz-linear-gradient(top, rgba(5,171,224,1) 0%, rgba(83,203,241,1) 46%, rgba(135,224,253,1) 99%); 
     background: -webkit-linear-gradient(top, rgba(5,171,224,1) 0%,rgba(83,203,241,1) 46%,rgba(135,224,253,1) 99%);
     background: linear-gradient(to bottom, rgba(5,171,224,1) 0%,rgba(83,203,241,1) 46%,rgba(135,224,253,1) 99%);
     background-attachment: fixed;
 	color: #fff;
 }
-#heroSvg.sunset, nav.sunset, #transition.sunset{
+#heroSvg.sunset, nav.sunset, #transition.sunset, .footer.sunset{
 	background: -moz-linear-gradient(top, rgba(11,13,58,1) 0%, rgba(229,43,161,1) 49%, rgba(255,221,137,1) 100%);
 	background: -webkit-linear-gradient(top, rgba(11,13,58,1) 0%,rgba(229,43,161,1) 49%,rgba(255,221,137,1) 100%); 
 	background: linear-gradient(to bottom, rgba(11,13,58,1) 0%,rgba(229,43,161,1) 49%,rgba(255,221,137,1) 100%);
 	background-attachment: fixed;
 	color: #fff;
 }
-#heroSvg.night, nav.night, #transition.night{
+#heroSvg.night, nav.night, #transition.night, .footer.night{
 	background: -moz-linear-gradient(top, rgba(0,51,84,1) 0%, rgba(11,13,58,1) 100%);
     background: -webkit-linear-gradient(top, rgba(0,51,84,1) 0%,rgba(11,13,58,1) 100%);
     background: linear-gradient(to bottom, rgba(0,51,84,1) 0%,rgba(11,13,58,1) 100%);
@@ -244,7 +265,7 @@ nav{
 	top: 0;
 	left: 0;
 	z-index: 999;
-	font-size: 25px;
+	font-size: 20px;
 	line-height: 60px;
 	font-family: 'Unica One';
 	color: #fff;
@@ -296,5 +317,11 @@ nav a{
 @media (max-width: 450px) {
 	a.outerCoverImg{
 		width: 100%;
+	}
+	#menuLogo{
+		display: none;
+	}
+	nav{
+		
 	}
 }
