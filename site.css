@@ -103,14 +103,6 @@ p{
 	margin-left: -50px;
 }
 
-@media (max-width: 800px) {
- #heroLogo{
-	font-size: 1.8em;
-	transition: .8s;
-	opacity: 1;
-	margin-left: 0px;
-}
-}
 #heroSvg {
 	position: absolute;
 	top: 0;
@@ -242,25 +234,7 @@ a.outerCoverImg{
 	width: 100%; 
 	height: 100%; 
 }
-@media (max-width: 800px) {
-.outerCoverImg{
-	width: 50%;
-}
-.outerEmbed{
-	width: 100%;
-}
-.u-marginLeft{
-	margin-left: 0px;
-}
-.u-marginRight{
-	margin-right: 0px;
-}
-}
-@media (max-width: 450px) {
-.outerCoverImg{
-	width: 100%;
-}
-}
+
 
 /* NAVIGATION */
 nav{
@@ -298,4 +272,29 @@ nav a{
 .dark, .dark a{
 	color: #313233 !important;
 	fill: #313233 !important;
+}
+@media (max-width: 800px) {
+	#heroLogo{
+		font-size: 1.8em;
+		transition: .8s;
+		opacity: 1;
+		margin-left: 0px;
+	}
+	.outerCoverImg{
+		width: 50%;
+	}
+	.outerEmbed{
+		width: 100%;
+	}
+	.u-marginLeft{
+		margin-left: 0px;
+	}
+	.u-marginRight{
+		margin-right: 0px;
+	}
+}
+@media (max-width: 450px) {
+	.outerCoverImg{
+		width: 100%;
+	}
 }
