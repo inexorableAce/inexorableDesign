@@ -1,2 +1,2 @@
 # inexorableDesign
-portfolio site
+portfolio site @ http://www.inexorabledesign.com/
