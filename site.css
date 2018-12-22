@@ -16,34 +16,110 @@ body {
 	font-weight: 400;
 	font-family: "DINPro", "Roboto", sans-serif;
 	color: #fff;
-	background: #000;
+	background: #efefef;
 	position: relative;
-	padding-top: 60px;
+}
+h1, h2, h3, h4{
+	font-family: "DINPro", "Roboto", sans-serif;
+	text-transform: uppercase;
+	letter-spacing: 20px;
+	color: #190061;
+	width: 100%;
+	text-align: center;
+}
+#splash{
+	width: 100%;
+	height: 100vh;
+	background: #171717;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 3%;
+}
+#splash > svg{
+	width: 80%;
+}
+#about{
+	width: 100%;
+	min-height: 100vh;
+	background: #fff;
 	display: flex;
 	flex-direction: column;
-	align-items: center;
 	justify-content: center;
+	align-items: center;
 }
-#coming_soon{
-	width: 80%;
-	max-width: 500px;
-}
-h1.brand_name{
-	font-weight: normal;
-	font-size: 4vw;
-	letter-spacing: 8px;
-	line-height: 148%;
-	text-align: center;
+.styleguide{
 	width: 100%;
-	margin: 0;
+	max-width: 918px;
 }
-h2.brand_name{
-	font-weight: normal;
-	font-size: 2.5vw;
-	letter-spacing: 8px;
-	line-height: 148%;
-	text-align: center;
-	width: 100%;
-	margin: 0;
+.twitter{
+	margin-top: 0;
+	margin-bottom: 150px;
+}
+.twitter a{
+	color: #190061;
+	text-transform: uppercase;
+	font-size: .7em;
+}
+.st0, .st1, .st2{
+	transform: scale(0) rotate(-360deg);
+	opacity: 0;
+	transform-origin: 165px center;
+	animation: growin 1s ease forwards;
+}
+.st3{
+	stroke-dasharray: 400;
+	stroke-dashoffset: 400;
+	stroke: #fff;
+	animation: dash 1.8s ease forwards;
+	fill: transparent
+}
+.st0{
+	fill:#3500D3;
+	animation-delay: .4s
+}
+.st1{
+	fill:#240090;
+	animation-delay: .2s
+}
+.st2{
+	fill:#190061;
+}
+.st4{fill:#FFF;}
+
+@keyframes dash {
+	0% {
+	  	stroke-dashoffset: 400;
+		fill: transparent;
+		stroke: #fff;
+	}
+	50%{
+		fill: transparent;
+		stroke: #fff;
+	}
+	90%{
+		stroke-dashoffset: 0;
+		fill: #fff;
+		stroke: transparent;
+	}
+	100%{
+		stroke-dashoffset: 0;
+		fill: #fff;
+		stroke: transparent;
+	}
+  }
+
+@keyframes growin{
+	0%{
+		transform: scale(0) rotate(-360deg);
+		opacity: 0;
+	}
+	10%{
+		opacity: 0;
+	}
+	100%{
+		transform: scale(1) rotate(0deg);
+		opacity: 1;
+	}
 }
 
