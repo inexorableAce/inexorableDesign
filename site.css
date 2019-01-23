@@ -1,125 +1,233 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Barlow:400,500,700');
 *{
-	box-sizing: border-box
-}
-body, html{
-	margin: 0;padding: 0
-}
-html {
-	height: 100%;
-	background: #fff;
-}
-body {
+	box-sizing: border-box;
+  }
+  html, body{
+	margin: 0;
+	width: 100%;
 	min-height: 100%;
-	font-size: 2em;
-	line-height: 1.6;
-	font-weight: 400;
-	font-family: "DINPro", "Roboto", sans-serif;
-	color: #fff;
-	background: #efefef;
-	position: relative;
-}
-h1, h2, h3, h4{
-	font-family: "DINPro", "Roboto", sans-serif;
-	text-transform: uppercase;
-	letter-spacing: 20px;
-	color: #190061;
+	font-family: "Barlow";
+	background: #3500D3;
+  }
+  body{
+	  position: relative;
+  }
+  section.hero{
 	width: 100%;
-	text-align: center;
-}
-#splash{
-	width: 100%;
+	padding: 7% 10%;
+	background: #3500D3;
 	height: 100vh;
-	background: #171717;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	padding: 3%;
-}
-#splash > svg{
-	width: 80%;
-}
-#about{
+	position: relative;
+	overflow: hidden;
+  }
+  section.hero > .halftone{
+	  width: 500px;
+	  position: absolute;
+	  left: 10%;
+	  bottom: -10%;
+	  opacity: .7;
+	  z-index: 11;
+	  pointer-events: none;
+  }
+  section.hero > h1{
+	color: #fff;
+	font-size: 5.5vw;
+	font-weight: 500;
+	filter: blur(1px) drop-shadow(-2px -2px magenta) drop-shadow(2px 2px cyan);
+	margin: 0;
+	line-height:100%;
+	vertical-align: middle;
+	position: absolute;
+	bottom: 60px;
+	right: calc(10% + 20px);
+	z-index: 12
+  }
+  section.hero > h1 > svg{
+	height: 10vw;
+	vertical-align: middle;
+	margin-left: -10px;
+  }
+  .crt::before {
+	content: " ";
+	display: block;
+	position: absolute;
+	height: 100%;
 	width: 100%;
-	min-height: 100vh;
-	background: #fff;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	background: linear-gradient(rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.5) 50%);
+	background-attachment: fixed;
+	z-index: 2;
+	background-size: 200% 7px;
+	pointer-events: none;
+	animation: scroll 6s ease-in infinite, flicker 2s infinite;
+  }
+  section.content{
+	background: #efefef;
+	margin: 0 10%;
+	width: calc(100% - 20%);
+	min-height: 800px;
+	padding: 0 40px 40px 40px;
+	overflow: hidden;
+	position: relative;
+	font-size: 20px;
+	line-height: 124%;
+	color: #171717;
+	z-index: 10;
+  }
+  section.content h1{
+	color: #3500D3;
+	font-size: 80px;
+	margin: -20px 0 60px 0;
+	font-weight: normal;
+	line-height: 100%;
+	filter: blur(1px) drop-shadow(-2px -2px magenta) drop-shadow(2px 2px cyan);
+  }
+  nav{
+	  height: 60px;
+	  width: 100%;
+	  background: transparent;
+	  font-size: 25px;
+	  position: fixed;
+	  top: 0;
+	  left: 0;
+	  padding: 0 10%;
+	  line-height: 60px;
+	  z-index: 9999;
+  }
+  nav a{
+	  color: #fff;
+	  text-decoration: none;
+	  padding: 0 20px;
+	  display: inline-block;
+	  position: relative;
+	  filter: blur(1px)
+  }
+  nav a:before, nav a:after{
+	  content: attr(data-label);
+	  display: block;
+	  padding: 0 20px;
+	  height: 100%;
+	  width: 100%;
+	  top: 0;
+	  left: 0;
+	  position: absolute;
+	  opacity: 1;
+	  
+  }
+  nav a:before{
+	color: magenta;
+	z-index: -2;
+	transform: translate(-1.5px, -1.5px)
+  }
+  nav a:after{
+	color: cyan;
+	z-index: -1; 
+	transform: translate(1.5px, 1.5px)
+  }
+  nav a:hover:before{
+	animation: glitch 4s cubic-bezier(.25, .46, .45, .94) both infinite;
+  }
+  nav a:hover:after{
+	animation: glitch 4s cubic-bezier(.25, .46, .45, .94) reverse both infinite;
+  }
+  @keyframes glitch {
+    0% {
+        transform: translate(-1.5px, -1.5px)
+    }
+    20% {
+        transform: translate(-5px, 5px)
+    }
+    40% {
+        transform: translate(-5px, -5px)
+    }
+    60% {
+        transform: translate(5px, 5px)
+    }
+    80% {
+        transform: translate(5px, -5px)
+    }
+    to {
+        transform: translate(1.5px, 1.5px)
+    }
 }
-.styleguide{
-	width: 100%;
-	max-width: 918px;
-}
-.twitter{
-	margin-top: 0;
-	margin-bottom: 150px;
-}
-.twitter a{
-	color: #190061;
-	text-transform: uppercase;
-	font-size: .7em;
-}
-.st0, .st1, .st2{
-	transform: scale(0) rotate(-360deg);
-	opacity: 0;
-	transform-origin: 165px center;
-	animation: growin 1s ease forwards;
-}
-.st3{
-	stroke-dasharray: 400;
-	stroke-dashoffset: 400;
-	stroke: #fff;
-	animation: dash 1.8s ease forwards;
-	fill: transparent
-}
-.st0{
-	fill:#3500D3;
-	animation-delay: .4s
-}
-.st1{
-	fill:#240090;
-	animation-delay: .2s
-}
-.st2{
-	fill:#190061;
-}
-.st4{fill:#FFF;}
-
-@keyframes dash {
+  @keyframes scroll { 
+	  0%{background-position:50% 100%}
+	  100%{background-position:50% 00%}
+  }
+  @keyframes flicker {
 	0% {
-	  	stroke-dashoffset: 400;
-		fill: transparent;
-		stroke: #fff;
+	opacity: 0.1;
 	}
-	50%{
-		fill: transparent;
-		stroke: #fff;
+	5% {
+	opacity: 0.2;
 	}
-	90%{
-		stroke-dashoffset: 0;
-		fill: #fff;
-		stroke: transparent;
+	10% {
+	opacity: 0.2;
 	}
-	100%{
-		stroke-dashoffset: 0;
-		fill: #fff;
-		stroke: transparent;
+	15% {
+	opacity: 0.5;
+	}
+	20% {
+	opacity: 0.1;
+	}
+	25% {
+	opacity: 0.4;
+	}
+	30% {
+	opacity: 0.3;
+	}
+	35% {
+	opacity: 0.3;
+	}
+	40% {
+	opacity: 0.2;
+	}
+	45% {
+	opacity: 0.4;
+	}
+	50% {
+	opacity: 0.5;
+	}
+	55% {
+	opacity: 0.1;
+	}
+	60% {
+	opacity: 0.2;
+	}
+	65% {
+	opacity: 0.5;
+	}
+	70% {
+	opacity: 0.3;
+	}
+	75% {
+	opacity: 0.3;
+	}
+	80% {
+	opacity: 0.2;
+	}
+	85% {
+	opacity: 0.4;
+	}
+	90% {
+	opacity: 0.4;
+	}
+	95% {
+	opacity: 0.3;
+	}
+	100% {
+	opacity: 0.2;
 	}
   }
-
-@keyframes growin{
-	0%{
-		transform: scale(0) rotate(-360deg);
-		opacity: 0;
+  @media screen and (min-width: 1200px) {
+	section.hero > h1 {
+	   font-size: 66px;
 	}
-	10%{
-		opacity: 0;
-	}
-	100%{
-		transform: scale(1) rotate(0deg);
-		opacity: 1;
-	}
-}
-
+	section.hero > h1 > svg{
+	height: 120px;
+  }
+   
+  }
