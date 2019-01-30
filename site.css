@@ -19,13 +19,14 @@
 	height: 100vh;
 	position: relative;
 	overflow: hidden;
+	display: flex;
+	align-items: center;
+	justify-content: center;
   }
   section.hero > .halftone{
-	  width: 500px;
-	  position: absolute;
-	  left: 10%;
-	  bottom: -10%;
-	  opacity: .7;
+		width: 80%;
+		max-width: 500px;
+	  opacity: 1;
 	  z-index: 11;
 	  pointer-events: none;
   }
@@ -120,12 +121,12 @@
   nav a:before{
 	color: magenta;
 	z-index: -2;
-	transform: translate(-1.5px, -1.5px)
+	transform: translate(0, 0)
   }
   nav a:after{
 	color: cyan;
 	z-index: -1; 
-	transform: translate(1.5px, 1.5px)
+	transform: translate(0, 0)
   }
   nav a:hover:before{
 	animation: glitch 4s cubic-bezier(.25, .46, .45, .94) both infinite;
