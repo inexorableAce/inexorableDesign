@@ -1,5 +1,5 @@
-window.onscroll = function () { 
-    if (document.documentElement.scrollTop >= 200 ) {
+window.onscroll = function () {
+    if (window.scrollY >= 200 ) {
         document.getElementById('root').classList.add("changeColor");
     } 
     else {
@@ -7,14 +7,6 @@ window.onscroll = function () {
     }
 };
 
-window.touchmove = function () { 
-    if (document.documentElement.scrollTop >= 200 ) {
-        document.getElementById('root').classList.add("changeColor");
-    } 
-    else {
-        document.getElementById('root').classList.remove("changeColor");
-    }
-};
 
 
 // var navLinks = document.querySelectorAll('nav a');
