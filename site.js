@@ -1,27 +1,27 @@
-function animate(elem, style, unit, from, to, time, prop) {
-    if (!elem) {
-        return;
+window.onscroll = function () { 
+    if (document.documentElement.scrollTop >= 200 ) {
+        document.getElementById('root').classList.add("changeColor");
+    } 
+    else {
+        document.getElementById('root').classList.remove("changeColor");
     }
-    var start = new Date().getTime(),
-        timer = setInterval(function () {
-            var step = Math.min(1, (new Date().getTime() - start) / time);
-            if (prop) {
-                elem[style] = (from + step * (to - from))+unit;
-            } else {
-                elem.style[style] = (from + step * (to - from))+unit;
-            }
-            if (step === 1) {
-                clearInterval(timer);
-            }
-        }, 25);
-    if (prop) {
-          elem[style] = from+unit;
-    } else {
-          elem.style[style] = from+unit;
-    }
+};
+
+
+var navLinks = document.querySelectorAll('nav a');
+
+for (let i = 0; i < navLinks.length; i++) {
+    navLinks[i].addEventListener('click', smoothScroll)
+} 
+
+function smoothScroll(){
+    let item = document.getElementById(this.dataset.scroll);
+    let wrapper = document.documentElement
+    let count = item.offsetTop - wrapper.scrollTop - 60 // xx = any extra distance from top ex. 60
+    wrapper.scrollBy({top: count, left: 0, behavior: 'smooth'})
 }
 
-window.onload = function () {
-    var target = document.getElementById("div5");
-    animate(document.scrollingElement || document.documentElement, "scrollTop", "", 0, target.offsetTop, 2000, true);
-};
+
+
+
+        
