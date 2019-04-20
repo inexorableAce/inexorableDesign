@@ -13,16 +13,13 @@
 		<link rel="apple-touch-icon" href="lib/touch.png" />
 		<link rel="Stylesheet" href="site.css"  />
     </head>
-    <body class="crt">
-		<nav>
-			<!--<a href="" data-label="Home">Home</a>
-			<a href="" data-label="Work">Work</a>
-			<a href="" data-label="About">About</a>-->
-			<a href="" data-label="soon...">soon...</a>
+    <body id="root">
+		<nav id="nav">
+			<a data-scroll="root" data-label="home">home</a>
+			<a data-scroll="work" data-label="work">work</a>
 		</nav>
 
 		<section class="hero">
-			<img src="lib/TESSERACT.gif" alt="" class="halftone">
 			<h1>
 			  inexorable.design
 			  	<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewbox="0 0 500 500">
@@ -36,25 +33,22 @@
 		  		</svg>
 			</h1>		
 		  </section>
-		  <!--<section class="content">
+		  <section class="content" id="work">
 				<h1>work</h1>
-				<p>coming soon</p>
-		  </section>-->
-
-
-		<script>
-
-			function activateNav(link){
-				var navLinks = document.querySelectorAll('nav a');
-
-				for(i = 0; i < navLinks.length; i++){
-					navLinks[i].classList.remove('active');
-				}
-
-				link.classList.add('active')
-			}
-
-		</script>
+				<p>Welcome! I'm Ace, a designer and developer. I do some branding work for content creators and I code some fun things for people sometimes as well. I also help out with <a href="destinyitemmanager.com">Destiny Item Manager</a> where I can. Below are some examples of my work. If you want to see more or want to know more about me, please feel free to reach out <a href="mailto:inexace@gmail.com">@inexace@gmail.com</a>.</p>
+				<h2>Branding</h2>
+				<div class="imgs">
+					<img src="lib/twitterMockupGeek.jpg" alt="TheGeekChick Twitter Mockup">
+					<img src="lib/twitterMockupHovey.jpg" alt="kjhovey Twitter Mockup">
+					<img src="lib/twitterMockupAcek.jpg" alt="Ace Twitter Mockup">
+					<img src="lib/twitterMockupHostility.jpg" alt="Hostility Twitter Mockup">
+					<img src="lib/twitterMockupNick.jpg" alt="BrickinNick Twitter Mockup">
+					<img src="lib/twitterMockupWendler.jpg" alt="Wendler Twitter Mockup">
+				</div>
+				<p>More to come as I get around to updating the site. Thanks for taking a look!</p>
+			</section>
+			
+		<script src="site.js"></script>
 		<script>
 			// GOOGLE ANALYTICS
 			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
