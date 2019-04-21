@@ -1,11 +1,11 @@
-window.onscroll = function () {
-    if (window.scrollY >= 200 ) {
-        document.getElementById('root').classList.add("changeColor");
-    } 
-    else {
-        document.getElementById('root').classList.remove("changeColor");
-    }
-};
+// window.onscroll = function () {
+//     if (window.scrollY >= 200 ) {
+//         document.getElementById('root').classList.add("changeColor");
+//     } 
+//     else {
+//         document.getElementById('root').classList.remove("changeColor");
+//     }
+// };
 
 
 
