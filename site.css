@@ -13,7 +13,7 @@
 		transition: background .3s;
 	}
 	.changeColor {
-		background: white;
+		background: #efefef;
  }
   section.hero{
 	width: 100%;
@@ -60,6 +60,10 @@
 	line-height: 100%;
 	margin-left: 1%
 	}
+	#navLogo{
+		height: 50px;
+		margin-top: 5px;
+	}
 	section.content h2{
 		color: #171717;
 		font-weight: normal;
@@ -78,15 +82,21 @@
 	  position: fixed;
 	  top: 0;
 	  left: 0;
-	  padding: 0 10%;
+	  padding: 0 5%;
 	  line-height: 60px;
 	  z-index: 9999;
-  }
+	}
+	nav::after{
+		content: '';
+		display: block; 
+		clear: both;
+	}
   nav a{
 	  color: #fff;
 	  text-decoration: none;
 	  padding: 0 20px;
-	  display: inline-block;
+		display: block;
+		float: left;
 		position: relative;
 		cursor: pointer;
   }
@@ -138,18 +148,27 @@
         transform: translate(1.5px, 1.5px)
     }
 	}
-	.imgs::after{
+	.floats::after{
 		content: '';
 		display: block;
 		width: 100%;
-		height: 1px;
+		height: 40px;
 		clear: both;
 	}
-	.imgs img{
+	.floats img{
 		float: left;
 		width: 48%;
 		height: auto;
 		margin: 1%;
+	}
+	.floats .cp_embed_wrapper{
+		float: left;
+		width: 48%;
+		margin: 1%;
+	}
+	.floats .fullWidth .cp_embed_wrapper{
+		width: 98%;
+		margin: 1% 1% 1% 1%;
 	}
 	@media(max-width: 950px){
 		section.hero > h1{
@@ -164,7 +183,7 @@
 			order: 1;
 			margin-left: 20%;
 			}
-			.imgs img{
+			.floats img, .floats .cp_embed_wrapper, .floats .fullWidth .cp_embed_wrapper{
 				width: 100%;
 				margin: 1% 0%;
 			}
