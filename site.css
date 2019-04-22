@@ -214,7 +214,7 @@
 			max-width: 90%;
 			font-size: 3rem;
 		}
-		.floats .brand, .floats .fullWidth{
+		.floats .brand, .floats .brand.fullWidth{
 			width: 100%;
 			margin: 1% 0%;
 		}
