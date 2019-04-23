@@ -20,22 +20,22 @@
 					inexorable.design
 				<svg version="1.1" id="navLogo" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewbox="0 0 500 500"><g><path fill="#FFFFFF" d="M406.7,151.4L257.1,65.1c-4.3-2.5-9.5-2.5-13.8,0L93.8,151.4c-4.3,2.5-6.9,7-6.9,11.9V336c0,4.9,2.6,9.5,6.9,11.9l149.5,86.3c4.3,2.5,9.5,2.5,13.8,0l149.5-86.3c4.3-2.5,6.9-7,6.9-11.9V163.3C413.5,158.4,410.9,153.9,406.7,151.4z M337.2,291.9c0,4.9-2.6,9.5-6.9,11.9l-73.2,42.2c-4.3,2.5-9.5,2.5-13.8,0l-73.2-42.2c-4.3-2.5-6.9-7-6.9-11.9v-84.5c0-4.9,2.6-9.5,6.9-11.9l73.2-42.2c4.3-2.5,9.5-2.5,13.8,0l73.2,42.2c4.3,2.5,6.9,7,6.9,11.9V291.9z"/></g></svg></a>
 			<div class="links">
-					<a href="#start" data-label="START ⬢">START ⬢</a>
-					<a href="#work" data-label="WORK ⬢">WORK ⬢</a>					
+					<a href="#start" class="scrollLink" data-label="START">START</a>
+					<a href="#work" class="scrollLink" data-label="WORK">WORK</a>					
 			</div>
 			
 		</nav>
 
 		<section class="hero">
-			<h1>
-				Hello, I'm <span>Ace</span>.
-				I'm a designer and developer.
-			</h1>
-			<h3>Let me show you my work...</h3>
+			<div class="animatedHeader">
+				<h1>Hello, I'm Ace.</h1><br>
+				<h1>I'm a <i>designer</i> and <i>developer</i>.</h1><br>
+				<a href="#work" class="scrollLink">Let me show you my work</a>
+		  </div>
 		</section>
 
 		<section class="content" id="work">
-			<h1>WORK ⬢</h1>
+			<h1>WORK</h1>
 			<div class="floats">
 				<div class="brand">
 						<h2>The Geek Chick Branding</h2>
@@ -121,6 +121,8 @@
 		</section>
 		
 		<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+		<script src="smoothscroll.js"></script>
+		<script src="site.js"></script>
 		<script>
 			// GOOGLE ANALYTICS
 			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

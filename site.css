@@ -99,11 +99,12 @@
 	h1{
 		color: rgba(0,0,0, .1);
 		font-size: 20vw;
-		font-weight: normal;
+		font-weight: 700;
 		line-height: 100%;
 		margin: 0;
 		margin-bottom: -6vw;
 		z-index: 1;
+		text-align: right;
 	}
 	h2{
 		color: #fff;
@@ -123,25 +124,102 @@
 	padding: 80px;
 	position: relative;
 	overflow: hidden;
-	margin-top: 200px;
-	margin-bottom: 100px;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	}
-	section.hero h1{
-		color: rgba(0,0,0, .5);
-		font-size: 5rem;
-		max-width: 70%;
-		margin-bottom: 10px;
+	/* animeted header */
+	.animatedHeader > a{
+		display: inline-block;
+		margin: 1vw 2vw;
+		padding: 1vw 0;
+		text-decoration: none;
+		border-bottom: 2px solid transparent;
+		font-size: 2vw;
+		color: transparent;
+		animation: 1s block-in 1.4s ease-out forwards;
+		transition: .3s ease;
 	}
-	section.hero h1 span{
-		color: #fff;
+	.animatedHeader > a:hover{
+		border-bottom: 2px dotted #fff;
+		letter-spacing: 1px;
 	}
-	section.hero h3{
-		color: #fff;
-		width: 100%;
-		margin-top: 20px;
+	.animatedHeader h1{
+		font-family: 'barlow';
+		font-weight: 400;
+		font-size: 5vw;
+		margin: 0;
+		padding: 1vw 2vw;
+		color: transparent;;
+		display: inline-block;
+		white-space: nowrap;
+		position: relative;
 	}
-	
- 
+	.animatedHeader > h1 > a{
+		color: inherit;
+		text-decoration: none;
+		font-weight: 500;
+	}
+	.animatedHeader > h1:nth-child(1){
+		animation: 1s block-in .5s ease-out forwards;
+	}
+	.animatedHeader > h1:nth-child(3){
+		animation: 1s block-in .7s ease-out forwards;
+	}
+	.animatedHeader > h1:nth-child(1)::after{
+		animation: 1s block-in-after .5s ease-out forwards;
+	}
+	.animatedHeader > h1:nth-child(3)::after{
+		animation: 1s block-in-after .7s ease-out forwards;
+	}
+	.animatedHeader > h1::after{
+		content: '';
+		display: block;
+		width: 0%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		background: #fff;
+	}
+	@keyframes block-in-after{
+		0%{
+			width: 0%;
+			left: 0;
+			right: auto;
+		}
+		40%{
+			width: 100%;
+			left: 0;
+			right: auto
+		}
+		60%{
+			width: 100%;
+			right: 0;
+			left:auto;
+		}
+		100%{
+			width: 0%;
+			right: 0;
+			left: auto;
+		}
+	}
+	@keyframes block-in{
+		0%{
+			color: transparent;
+		}
+		40%{
+			color: transparent;
+		}
+		60%{
+			color:#fff;
+		}
+		100%{
+			color: #fff;
+		}
+	}
+	/* end header */
   section.content{
 	width: calc(100% - 2rem);
 	margin: 0 auto;
@@ -209,10 +287,6 @@
 		section.hero, section.content{
 			width: 100%;
 			padding: 10px;
-		}
-		section.hero > h1{
-			max-width: 90%;
-			font-size: 3rem;
 		}
 		.floats .brand, .floats .brand.fullWidth{
 			width: 100%;
