@@ -272,6 +272,12 @@
 		letter-spacing: 2px
 	}
 	@media(max-width: 950px){
+		.animatedHeader h1{
+			font-size: 7vw;
+		}
+		.animatedHeader > a{
+			font-size: 5vw;
+		}
 		nav{
 			position: absolute;
 		}
