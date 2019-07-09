@@ -10,6 +10,15 @@ function smoothScroll(e){
     document.querySelector(item).scrollIntoView({ behavior: 'smooth' });
 }
 
+var cards = document.querySelectorAll('.brand');
+
+for (let i = 0; i < cards.length; i++) {
+    cards[i].addEventListener('click', expand)
+} 
+
+function expand(){
+    this.classList.toggle('grow')       
+}
 
 
 

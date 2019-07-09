@@ -11,90 +11,26 @@
 	}
 	/* NAVIGATION */
 	nav{
-	  width: 100%;
-	  background: linear-gradient(180deg, rgba(53,0,211,1) 35%, rgba(53,0,211,0) 100%);
-	  font-size: 25px;
-	  position: fixed;
-	  top: 0;
-	  left: 0;
-	  padding: 1rem 1.5rem;
-	  z-index: 9999;
-	}
-	nav::after{
-		content: '';
-		display: block; 
-		clear: both;
-	}
-	nav a{
+		width: 100%;
+		background: linear-gradient(180deg, rgba(53,0,211,1) 35%, rgba(53,0,211,0) 100%);
+		font-size: 25px;
+		position: fixed;
+		top: 0;
+		left: 0;
+		padding: 1rem 1.5rem;
 		color: #fff;
 		text-decoration: none;
 		font-size: 40px;
 		font-weight: 500;
+		z-index: 9999;
 	}
-	nav > a > svg{
+	nav > svg{
 		vertical-align: middle;
 		height: 70px;
 	}
-	.links{
-		float: right;
-	}
-  .links a{
-		color: #fff;
-		font-size: 25px;
-		font-weight: 400;
-	  padding: .5rem 1rem;
-		display: block;
-		float: left;
-		position: relative;
-		cursor: pointer;
-  }
-  .links a:before, .links a:after{
-	  content: attr(data-label);
-	  display: block;
-	  padding: .5rem 1rem;
-	  height: 100%;
-	  width: 100%;
-	  top: 0;
-	  left: 0;
-	  position: absolute;
-	  opacity: 1;
-	  filter: blur(1px)
-  }
-  .links a:before{
-	color: magenta;
-	z-index: -2;
-	transform: translate(0, 0)
-  }
-  .links a:after{
-	color: cyan;
-	z-index: -1; 
-	transform: translate(0, 0)
-  }
-  .links a:hover:before{
-	animation: glitch 4s cubic-bezier(.25, .46, .45, .94) both infinite;
-  }
-  .links a:hover:after{
-	animation: glitch 4s cubic-bezier(.25, .46, .45, .94) reverse both infinite;
-  }
-  @keyframes glitch {
-    0% {
-        transform: translate(-1.5px, -1.5px)
-    }
-    20% {
-        transform: translate(-5px, 5px)
-    }
-    40% {
-        transform: translate(-5px, -5px)
-    }
-    60% {
-        transform: translate(5px, 5px)
-    }
-    80% {
-        transform: translate(5px, -5px)
-    }
-    to {
-        transform: translate(1.5px, 1.5px)
-    }
+	b{
+		font-weight: 500;
+		font-family: "Barlow";
 	}
 	h1{
 		color: rgba(0,0,0, .1);
@@ -118,32 +54,118 @@
 	a{
 		color: #fff;
 	}
+  	section.hero{
+		width: calc(100% - 2rem);
+		padding: 80px;
+		position: relative;
+		overflow: hidden;
+		height: 100vh;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	/* work */
+	.st0{display:none;}
+	.st1{display:inline;}
+	.st2{fill:#FFFFFF;}
+	.logos{
+		width: calc(20% - 10px);
+	}
+	.logos{
+		background: transparent;
+		box-shadow: 0 14px 28px rgba(0,0,0,0.0), 0 10px 10px rgba(0,0,0,0.0);
+		cursor: pointer;
+	}
+	.logos:hover{
+		background: #efefef;
+		border-radius: 4px;
+		box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+	}
+	#svgDIM:hover *{
+		fill: #f37423
+	}
+	#svgDestinySets:hover .st1{
+		fill: #1C1F3B
+	}
+	#dsGradient{
+		--color-stop-1: #37a6dd;
+  		--color-stop-2: #84c265;
+	}
+	#geekGradient{
+		--color-stop-1: #D775AA;
+		--color-stop-2: #A082B8;
+		--color-stop-3: #9ACDEF;
+	}
+	#ggGradient{
+		--color-stop-1: #3D2044;
+		--color-stop-2: #1C203E;
+	}
+	#svgDestinySets:hover .st2{
+		fill: url(#dsGradient);
+	}
+	#svgDestinySets:hover .st3{
+		fill: #84c265;
+	}
+	#svgHovey:hover .st2{
+		fill: #61B970;
+	}
+	#svgHovey:hover .st1{
+		fill: #1E1E1E;
+	}	
+	#svgGeek:hover .st1{
+		fill: url(#geekGradient);
+	}
+	#svgGeek:hover .st2{
+		fill: #3D2752
+	}
+	
+	#svgRoar .st2{
+		fill: #000;
+	}
+	#svgRoar .st3{
+		fill: #fff;
+	}
+	#svgRoar .st3, #svgRoar .st4{
+		fill: #fff;
+	}
+	#svgRoar:hover .st1{
+		fill: #FBB829;
+	}
+	#svgRoar:hover .st2, #svgRoar:hover .st4{
+		fill: #424242;
+	}
+	#svgRoar:hover .st3{
+		fill: #fff;
+	}
 
-  section.hero{
-	width: calc(100% - 2rem);
-	padding: 80px;
-	position: relative;
-	overflow: hidden;
-	height: 100vh;
-	display: flex;
-	align-items: center;
-	justify-content: center;
+	#svgHostility:hover .st2{
+		fill: #FF4040;
 	}
-	/* animeted header */
-	.animatedHeader > a{
-		display: inline-block;
-		margin: 1vw 2vw;
-		padding: 1vw 0;
-		text-decoration: none;
-		border-bottom: 2px solid transparent;
-		font-size: 2vw;
-		color: transparent;
-		animation: 1s block-in 1.4s ease-out forwards;
-		transition: .3s ease;
+	#svgWendler .st1, #svgWendler .st2, #svgWendler .st3{
+		fill: #ffffff
 	}
-	.animatedHeader > a:hover{
-		border-bottom: 2px dotted #fff;
-		letter-spacing: 1px;
+	#svgWendler:hover .st1{
+		fill: #B11623
+	}
+	#svgWendler:hover .st2{
+		fill: #363A44
+	}
+	#svgWendler:hover .st3{
+		fill: #CCCCCC
+	}
+	#svgMeg:hover .st2{
+		fill: #AEE5CB
+	}
+	#svgNick:hover .st2{
+		fill: #99C63D
+	}
+	#svgGG:hover .st2{
+		fill: url(#ggGradient);
+	}
+	/* animated header */
+	.animatedHeader > a.btn{
+		margin-top: 40px;
+		margin-left: 2vw;
 	}
 	.animatedHeader h1{
 		font-family: 'barlow';
@@ -220,82 +242,95 @@
 		}
 	}
 	/* end header */
-  section.content{
-	width: calc(100% - 2rem);
-	margin: 0 auto;
-	min-height: 800px;
-	padding: 0 40px 40px 40px;
-	overflow: hidden;
-	position: relative;
-	font-size: 20px;
-	line-height: 124%;
-	color: #171717;
-	z-index: 10;
-  }
+	.spacer{
+		height: 150px;
+	}
+	section.content{
+		width: calc(100% - 2rem);
+		margin: 0 auto;
+		min-height: 800px;
+		padding: 0 40px 40px 40px;
+		overflow: hidden;
+		position: relative;
+		font-size: 20px;
+		line-height: 124%;
+		color: #171717;
+		z-index: 10;
+	}
 	section.content p{
 		font-size: 1.2rem;
 	}
-	.floats::after{
-		content: '';
-		display: block;
-		width: 100%;
-		height: 40px;
-		clear: both;
-	}
-	.floats .brand{
-		float: left;
-		width: 48%;
-		height: auto;
-		margin: 2% 2% 0 0;
-		z-index: 2;
-	}
-	.floats .brand img{
-		width: 100%;
-	}
-	.floats .brand.fullWidth{
-		width: 98%;
-		margin: 2% 2% 0 0;
+	
+	@keyframes fadeIn{
+		0%{
+			background: transparent;
+		}
+		40%{
+			background: transparent;
+		}
+		60%{
+			background:#fff;
+		}
+		100%{
+			background: #fff;
+		}
 	}
 	a.btn{
 		background: #fff;
+		background-size: cover;
+		background-position: center center;
 		color: #3500D3;
 		display: inline-block;
 		margin: 10px 10px 0 0;
 		padding: .5em 1em;
-		font-size: 1.5rem;
+		font-size: 2vw;
 		text-decoration: none;
 		border-radius: 4px;
-		transition: .3s;
+		transition: background .3s, color 0s, box-shadow .3s;
 		margin-bottom: 50px;
+		position: relative;
+		box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 	}
 	a.btn:hover{
-		letter-spacing: 2px
+		background: url("lib/vhs.gif");
+		background-size: cover;
+		background-position: center center;
+		color: #fff;
+		box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+	}
+	@media(min-width: 1200px){
+		a.btn{
+			font-size: 24px;
+		}
 	}
 	@media(max-width: 950px){
 		.animatedHeader h1{
 			font-size: 7vw;
 		}
-		.animatedHeader > a{
-			font-size: 5vw;
-		}
 		nav{
 			position: absolute;
 		}
-		nav .links{
-			display: none;
-		}
-		nav a{
+		nav{
 			font-size: 30px;
 		}
-		nav a svg{
+		nav svg{
 			height: 60px;
 		}
 		section.hero, section.content{
 			width: 100%;
 			padding: 10px;
 		}
-		.floats .brand, .floats .brand.fullWidth{
-			width: 100%;
-			margin: 1% 0%;
+		.logos{
+			width: calc(33.33% - 10px);
+		}
+	}
+	@media(max-width: 800px){
+		a.btn{
+			font-size: 16px;
+		}
+	}
+	@media(max-width: 400px){
+		.logos{
+			width: calc(50% - 10px);
 		}
 	}
