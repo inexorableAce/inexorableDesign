@@ -64,10 +64,19 @@
 		align-items: center;
 		justify-content: center;
 	}
+	#char{
+		height: 60%;
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		transition: height .3s ease
+	}
+	#char .st0{fill:#AFB0B2;}
+	#char .st1{fill:#929497;}
+	#char .st2{fill: url('#img1');}
+	#char .st3{fill:#FFFFFF;stroke:#000000;stroke-width:6;stroke-miterlimit:10;}
+	#char .st4{fill:#F208F9;}
 	/* work */
-	.st0{display:none;}
-	.st1{display:inline;}
-	.st2{fill:#FFFFFF;}
 	.logos{
 		width: calc(20% - 10px);
 	}
@@ -200,7 +209,7 @@
 	}
 
 	.test{
-		fill: lime;
+		fill: lime !important;
 	}
 	/* animated header */
 	.animatedHeader > a.btn{
@@ -367,6 +376,9 @@
 	@media(max-width: 800px){
 		a.btn{
 			font-size: 16px;
+		}
+		#char{
+			height: 40%
 		}
 	}
 	@media(max-width: 400px){
