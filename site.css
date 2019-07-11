@@ -75,17 +75,15 @@
 		background: transparent;
 		box-shadow: 0 14px 28px rgba(0,0,0,0.0), 0 10px 10px rgba(0,0,0,0.0);
 		cursor: pointer;
+		transition: background .3s ease;
+	}
+	.logos *{
+		transition: fill 1s ease;
 	}
 	.logos:hover{
 		background: #efefef;
 		border-radius: 4px;
 		box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
-	}
-	#svgDIM:hover *{
-		fill: #f37423
-	}
-	#svgDestinySets:hover .st1{
-		fill: #1C1F3B
 	}
 	#dsGradient{
 		--color-stop-1: #37a6dd;
@@ -100,67 +98,109 @@
 		--color-stop-1: #3D2044;
 		--color-stop-2: #1C203E;
 	}
-	#svgDestinySets:hover .st2{
-		fill: url(#dsGradient);
-	}
-	#svgDestinySets:hover .st3{
-		fill: #84c265;
-	}
-	#svgHovey:hover .st2{
-		fill: #61B970;
-	}
-	#svgHovey:hover .st1{
-		fill: #1E1E1E;
-	}	
-	#svgGeek:hover .st1{
-		fill: url(#geekGradient);
-	}
-	#svgGeek:hover .st2{
-		fill: #3D2752
-	}
-	
-	#svgRoar .st2{
-		fill: #000;
-	}
-	#svgRoar .st3{
+	#svgDIM .fullLogo > *{
 		fill: #fff;
 	}
-	#svgRoar .st3, #svgRoar .st4{
-		fill: #fff;
-	}
-	#svgRoar:hover .st1{
-		fill: #FBB829;
-	}
-	#svgRoar:hover .st2, #svgRoar:hover .st4{
-		fill: #424242;
-	}
-	#svgRoar:hover .st3{
-		fill: #fff;
+	#svgDIM:hover .fullLogo > *{
+		fill: #f37423
 	}
 
-	#svgHostility:hover .st2{
-		fill: #FF4040;
+	#svgDestinySets .logoTop > *{
+		fill: #fff;
 	}
-	#svgWendler .st1, #svgWendler .st2, #svgWendler .st3{
-		fill: #ffffff
+	#svgDestinySets .logoBottom > *{
+		fill: #000;
 	}
-	#svgWendler:hover .st1{
-		fill: #B11623
+	#svgDestinySets:hover .logoTop > *{
+		fill: #37a6dd;
 	}
-	#svgWendler:hover .st2{
-		fill: #363A44
+	#svgDestinySets:hover .logoBottom > *{
+		fill: #1C1F3B;
 	}
-	#svgWendler:hover .st3{
-		fill: #CCCCCC
+
+	#svgHovey .sword{
+		fill: #fff;
 	}
-	#svgMeg:hover .st2{
-		fill: #AEE5CB
+	#svgHovey .letter{
+		fill: #000;
 	}
-	#svgNick:hover .st2{
+	#svgHovey:hover .sword{
+		fill: #61B970;
+	}
+	#svgHovey:hover .letter{
+		fill: #1E1E1E;
+	}
+
+	#svgGeek .outline{
+		fill: #000;
+	}
+	#svgGeek .letterWand > *, #svgGeek .kanji > *{
+		fill: #fff;
+	}
+	#svgGeek:hover .outline{
+		fill: #D775AA;
+	}
+	#svgGeek:hover .letterWand > *, #svgGeek:hover .kanji > *{
+		fill: #3D2752
+	}
+
+	#svgRoar .innerMane, #svgRoar .innerCrown > *, #svgRoar .faceFeatures > *{
+		fill: #000;
+	}
+	#svgRoar .outerMane, #svgRoar .lettering > *, #svgRoar .outerCrown > *, #svgRoar .face > *{
+		fill: #fff;
+	}
+	#svgRoar:hover .innerMane, #svgRoar:hover .innerCrown > *{
+		fill: #FBB829;
+	}
+	#svgRoar:hover .outerMane, #svgRoar:hover .lettering > *, #svgRoar:hover .outerCrown > *, #svgRoar:hover .faceFeatures > *{
+		fill: #424242;
+	}
+
+	#svgNick .fullLogo > *{
+		fill: #fff
+	}
+	#svgNick:hover .fullLogo > *{
 		fill: #99C63D
 	}
-	#svgGG:hover .st2{
-		fill: url(#ggGradient);
+
+	#svgMeg .fullLogo > *{
+		fill: #fff
+	}
+	#svgMeg:hover .fullLogo > *{
+		fill: #AEE5CB
+	}
+
+	#svgWendler .fullLogo > *{
+		fill: #ffffff
+	}
+	#svgWendler:hover .fullLogo .left{
+		fill: #B11623
+	}
+	#svgWendler:hover .fullLogo .center{
+		fill: #363A44
+	}
+	#svgWendler:hover .fullLogo .right{
+		fill: #CCCCCC
+	}
+	
+
+	#svgHostility .fullLogo > *{
+		fill: #fff;
+	}
+	#svgHostility:hover .fullLogo > *{
+		fill: #FF4040;
+	}
+	
+	#svgGG .fullLogo > g > *{
+		fill: #fff;
+	}
+	#svgGG:hover .fullLogo > g > *{
+		fill: #3D2044;
+	}
+
+	.test{
+		fill: lime;
 	}
 	/* animated header */
 	.animatedHeader > a.btn{
