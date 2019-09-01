@@ -154,7 +154,7 @@ section.main img{
 	transform: translateY(-2px);
 }
 @media (max-width: 700px){
-	section.main p, section.main h1, section.main .info, section.main img{
+	section.main p, section.main h1, section.main .info, section.main img, section.main h3{
 		padding: 0 10px;
 	}
 	.mainLogo{
