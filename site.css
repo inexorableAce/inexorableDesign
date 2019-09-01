@@ -38,6 +38,7 @@ section.hero{
 	align-items: center;
 	justify-content: center;
 	position: relative;
+	flex-direction: column;
 	color: #fff;
 	background: #003cff;
 	background-image: url('lib/hero.png');
@@ -48,6 +49,7 @@ section.hero{
 }
 section.hero .logoMark{
 	width: 30vmin;
+	height: 30vmin;
 	margin-bottom: 10vmin;
 	display: flex;
 	align-items: center;
@@ -55,6 +57,9 @@ section.hero .logoMark{
 	position: relative;
 	transform: rotateX(-40deg) rotateY(-40deg);
 	animation: rotate 10s ease-in-out alternate infinite;
+}
+.links{
+
 }
 .logoMark .mark{
 	width: 100%;
@@ -117,7 +122,6 @@ section.hero .logoMark{
 section.main{
 	max-width: 700px;
 	margin: 80px auto 0 auto;
-	min-height: 300px;
 	position: relative;
 	background: #efefef;
 	font-size: 21px;
@@ -136,11 +140,17 @@ section.main img{
 	font-size: 40px;
 	margin: 0;
 }
+.center{
+	display: block;
+	padding-top: 100px;
+	text-align: center;
+}
 .btn{
-	background: #fff;
+	background: #003cff;
 	display: inline-block;
 	font-size: 18px;
-	color: #2d2d2d;
+	margin: 10px;
+	color: #fff;
 	padding: 10px 20px;
 	font-weight: 700;
 	box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
