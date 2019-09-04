@@ -29,7 +29,6 @@
     "babel-preset-stage-1": "^6.1.18",
     "contentful": "^7.9.1",
     "diff": "3.5.0",
-    "growl": "1.10.0",
     "lodash": "^3.10.1",
     "markdown-to-jsx": "^6.10.3",
     "moment": "^2.24.0",
