@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Barlow:500|Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Red+Hat+Display:900|Roboto&display=swap');
 .container{
     width: 100%;
     margin: 0;
@@ -21,8 +21,8 @@ body{
 	margin-bottom: 200px
 }
 h1, h2, h3, h4{
-	font-weight: 500;
-	font-family: "Barlow";
+	font-weight: 900;
+	font-family: "Red Hat Display";
 	margin: 0px;
 }
 section.blog .postBody{
