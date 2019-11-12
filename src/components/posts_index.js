@@ -23,7 +23,7 @@ class PostsIndex extends Component {
     return (
       <div>
         <section className="hero">
-            <h1 className="mainLogo">inexorable.design</h1>
+            <h1 className="mainLogo">inexorable<br>design.</h1>
             <div className="logoMark">
                 <img src="assets/imgs/mark.svg" className="mark shadow" />
                 <img src="assets/imgs/mark.svg" className="mark shadow2" />
