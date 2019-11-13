@@ -213,16 +213,19 @@ section.actions{
 
 .footer{
 	margin-top: 200px;
-	padding: 5%;
+	padding: 1% 2%;
 	font-family: 'Red Hat Display';
 	text-align: right;
 }
 .footer > a{
-	margin: 0 10px;
+	display: inline-block;
+	margin: 15px;
 	transition: .3s ease;
+	padding: 0 0 5px 0;
+	border-bottom: 2px solid transparent;
 }
 .footer > a:hover{
-	letter-spacing: 1px;
+	border-bottom: 2px solid #003cff;
 }
 @media (max-width: 700px){
 	section.blog .postBody, section.blog h1, section.blog h3, section.blog .info, section.blog h2{
