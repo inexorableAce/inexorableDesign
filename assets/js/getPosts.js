@@ -1,42 +1,99 @@
-function getPosts(url, limit){
+const API_BASE_URL = 'https://cdn.contentful.com';
+const API_SPACE_ID = 'ahsp2ycgckbo';
+const API_TOKEN = 'OkISM2VJTBhF45lWA4VxVXBmuyZb1Alec8FygVvjydk';
+const loadMoreBtn = document.getElementById('loadMore')
+const allpostsBtn = document.getElementById('backHome')
+const hero = document.getElementById('hero')
+
+function getPosts(limit, skip){
     let xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
             let data = JSON.parse(this.responseText)
-            console.log(data.items)
             let md = new Remarkable();
+            let blog = document.getElementById('blog')
 
-            let posts = '';
-
-            for (let i = 0; i < data.items.length; i++) {
-                const e = data.items[i];
-                posts +=    '<article id="' + e.sys.id + '">' + 
-                                '<h2><a href="?post=' + e.sys.id + '">' + e.fields.title + '</a></h2>' +
-                                '<span class="info">' + moment(e.fields.date).format('LL') + '</span>' +
-                                '<div class="postBody">' + md.render(e.fields.body) + '</div>'
-                                '</article>'
+            if(data.total == 0){
+                loadMoreBtn.innerText = "No more posts to show!";
+                loadMoreBtn.classList.add('shake')
+            }else{
+                for (let i = 0; i < data.items.length; i++) {
+                    const e = data.items[i];
+                    
+                    let post = document.createElement('article');
+                    post.classList.add('fadeIn');
+                    post.setAttribute('id', e.sys.id);
+                    post.innerHTML = '<h2><a href="?post=' + e.sys.id + '">' + e.fields.title + '</a></h2>' +
+                                     '<span class="info">' + moment(e.fields.date).format('LL') + '</span>' +
+                                     '<div class="postBody">' + md.render(e.fields.body) + '</div>'
+    
+                    blog.appendChild(post)
+                }
             }
-
-
-
-            document.getElementById('blog').innerHTML = posts
         }
     };
-    xmlhttp.open('GET', url);
+    xmlhttp.open('GET', API_BASE_URL + '/spaces/' + API_SPACE_ID + '/entries?access_token=' + API_TOKEN + '&content_type=blog&limit=' + limit + '&skip=' + skip + '&order=-fields.date');
     xmlhttp.send();
 }
 
-let postsArray = ''
-const API_BASE_URL = 'https://cdn.contentful.com';
-const API_SPACE_ID = 'ahsp2ycgckbo';
-const API_TOKEN = 'OkISM2VJTBhF45lWA4VxVXBmuyZb1Alec8FygVvjydk';
 
-getPosts(API_BASE_URL + '/spaces/' + API_SPACE_ID + '/entries?access_token=' + API_TOKEN + '&content_type=blog&order=-fields.date')
+function getSinglePost(id){
+    let xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            let data = JSON.parse(this.responseText)
+            console.log(data)
+            let md = new Remarkable();
+            let blog = document.getElementById('blog')
+
+            
+            loadMoreBtn.classList.add('hide');
+            allpostsBtn.classList.remove('hide');
+            hero.classList.add('smallHero');
+
+            let post = document.createElement('article');
+            post.classList.add('fadeIn');
+            post.setAttribute('id', data.sys.id);
+            post.innerHTML = '<h2><a href="?post=' + data.sys.id + '">' + data.fields.title + '</a></h2>' +
+                             '<span class="info">' + moment(data.fields.date).format('LL') + '</span>' +
+                             '<div class="postBody">' + md.render(data.fields.body) + '</div>'
+
+            blog.appendChild(post)
+        }
+    };
+    xmlhttp.open('GET', API_BASE_URL + '/spaces/' + API_SPACE_ID + '/entries/' + id + '?access_token=' + API_TOKEN + '&content_type=blog');
+    xmlhttp.send();
+}
+
+//get URL params
+function getParamsByName(name, url){
+    if(!url) url = window.location.href;
+    name = name.replace(/[\[\]]/g, '\\$&');
+    let regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+        results = regex.exec(url);
+    if(!results) return null;
+    if(!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, ' '));
+}
+
+let param = getParamsByName('post');
+console.log(param)
+
+if(param){
+    getSinglePost(param)
+}else{
+    getPosts(3,0)
+}
+
+loadMoreBtn.addEventListener('click', function(e){
+    e.preventDefault;
+    let skipAmt = e.target.dataset.skip;
+    let limitAmt = e.target.dataset.limit;
+
+    getPosts(limitAmt, skipAmt);
+
+    e.target.dataset.skip = Number(skipAmt) + 3
+})
 
 
 
-{/* <article key={post.sys.id}>
-          <h2>{post.fields.title}</h2>
-          <span className="info">{moment(post.fields.date).format('LL')}</span>
-          <Markdown className="postBody">{post.fields.body}</Markdown>
-</article> */}
