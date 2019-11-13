@@ -25,15 +25,6 @@ h1, h2, h3, h4{
 	font-family: "Red Hat Display";
 	margin: 0px;
 }
-section.blog .postBody{
-	margin-bottom: 100px
-}
-.info{
-	display: block;
-	margin-bottom: 10px;
-	font-size: 16px;
-	color: #999;
-}
 a{
 	color: #003cff;
 	text-decoration: none;
@@ -48,80 +39,63 @@ section.hero{
 	flex-direction: column;
 	color: #fff;
 	background: #003cff;
-	background-image: url('/assets/imgs/hero.png');
-	background-repeat: repeat-x;
-	background-position: bottom center;
-	background-size: auto 150px;
-	perspective: 1000px;
 }
-section.hero .logoMark{
-	width: 30vmin;
-	height: 30vmin;
-	margin-bottom: 10vmin;
-	display: flex;
-	align-items: center;
-	justify-content: center;
+section.hero > h1 > svg{
+	fill: #fefefe;
+  	width: 10vmin;
+  	position: absolute;
+  	left: -11vmin;
+	top: -1vmin;
+	transform: scale(0);
+  	opacity: 0;
+  	animation: svgin .5s ease forwards;
+  	transform-origin: center left;
+}
+section.hero > h1 {
+	font-size: 7vmin;
+	line-height: 7.2vmin;
+	color: #fefefe;
 	position: relative;
-	transform: rotateX(-40deg) rotateY(-40deg);
-	animation: rotate 10s ease-in-out alternate infinite;
+	margin-left: 10vmin;
+	text-align: right;
 }
-.logoMark .mark{
-	width: 100%;
-	margin-left: 10px;
-	position: absolute;
+section.hero > h1 span i {
+	font-style: normal;
+	transform: scale(0);
+	transform-origin: center left;
+	opacity: 0;
 }
-.logoMark .shadow{
-	animation: 5s growth ease infinite;
+.in {
+	display: inline-block;
+	animation: in .5s ease forwards;
 }
-.logoMark .shadow2{
-	animation: 5s growth2 .1s ease infinite;
+@keyframes in {
+	50% {
+	  transform: scale(2);
+	}
+	100% {
+	  transform: scale(1);
+	  opacity: 1;
+	}
+  }
+  @keyframes svgin {
+	50% {
+	  transform: scale(2.7);
+	}
+	100% {
+	  transform: scale(1);
+	  opacity: 1;
+	}
+  }
+/* BLOG STYLES */
+section.blog .postBody{
+	margin-bottom: 100px
 }
-@keyframes growth{
-	0%{
-		
-	}
-	10%{
-		transform: scale(1.2);
-	}
-	30%{
-		transform: scale(1.2);
-		opacity: 0;
-	}
-	100%{
-		opacity: 0;
-	}
-}
-@keyframes growth2{
-	0%{
-		
-	}
-	10%{
-		transform: scale(1.4);
-	}
-	30%{
-		transform: scale(1.4);
-		opacity: 0;
-	}
-	100%{
-		opacity: 0;
-	}
-}
-@keyframes rotate{
-	to{
-		transform: rotateX(40deg) rotateY(40deg);
-	}
-}
-@keyframes expand{
-	0%{
-
-	}
-	20%{
-		color: #fff;
-	}
-	100%{
-		letter-spacing: 0px;
-		color: #fff;
-	}
+.info{
+	display: block;
+	margin-bottom: 10px;
+	font-size: 16px;
+	color: #999;
 }
 section.blog{
 	max-width: 700px;
@@ -134,6 +108,7 @@ section.blog{
 }
 section.blog img{
 	width: 100%;
+	height: auto;
 }
 .mainLogo{
 	color: #fff;
