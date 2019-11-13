@@ -12,7 +12,7 @@ function getPosts(url, limit){
                 const e = data.items[i];
                 posts +=    '<article id="' + e.sys.id + '">' + 
                                 '<h2><a href="?post=' + e.sys.id + '">' + e.fields.title + '</a></h2>' +
-                                '<span className="info">' + moment(e.fields.date).format('LL') + '</span>' +
+                                '<span class="info">' + moment(e.fields.date).format('LL') + '</span>' +
                                 '<div class="postBody">' + md.render(e.fields.body) + '</div>'
                                 '</article>'
             }
