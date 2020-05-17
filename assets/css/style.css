@@ -15,7 +15,7 @@ html, body{
 	width: 100%;
 	min-height: 100vh;
 	font-family: "Roboto";
-	background: #efefef;
+	background: #121212;
 }
 h1, h2, h3, h4{
 	font-weight: 900;
@@ -23,7 +23,7 @@ h1, h2, h3, h4{
 	margin: 0px;
 }
 a{
-	color: #003cff;
+	color: #d62249;
 	text-decoration: none;
 }
 section.hero{
@@ -35,7 +35,7 @@ section.hero{
 	position: relative;
 	flex-direction: column;
 	color: #fff;
-	background: #003cff;
+	background: #d62249;
 }
 section.smallHero{
 	height: auto;
@@ -55,7 +55,7 @@ section.hero > h1 > svg{
   	transform-origin: center left;
 }
 section.smallHero > h1 > svg{
-	fill: #003cff;
+	fill: #d62249;
 	width: 6vmin;
 	left: -7vmin;
 	top: -1vmin;
@@ -72,7 +72,7 @@ section.smallHero > h1{
 	font-size: 4vmin;
 	line-height: 4.2vmin;
 	margin-left: 6vmin;
-	color: #003cff;
+	color: #d62249;
 }
 section.hero > h1 span i {
 	font-style: normal;
@@ -116,10 +116,10 @@ section.blog{
 	max-width: 700px;
 	margin: 80px auto 0 auto;
 	position: relative;
-	background: #efefef;
+	background: #121212;
 	font-size: 21px;
 	line-height: 148%;
-	color: #2d2d2d;
+	color: #efefef;
 }
 section.blog img{
 	width: 100%;
@@ -140,7 +140,7 @@ section.blog img{
 	text-align: center;
 }
 .btn{
-	background: #003cff;
+	background: #d62249;
 	display: inline-block;
 	font-size: 18px;
 	margin: 10px;
@@ -158,8 +158,8 @@ section.blog img{
 }
 .btnT{
 	background: transparent;
-	border: 2px solid #003cff;
-	color: #003cff;
+	border: 2px solid #d62249;
+	color: #d62249;
 	width: 100%;
 	text-align: center;
 }
@@ -225,7 +225,7 @@ section.actions{
 	border-bottom: 2px solid transparent;
 }
 .footer > a:hover{
-	border-bottom: 2px solid #003cff;
+	border-bottom: 2px solid #d62249;
 }
 @media (max-width: 700px){
 	section.blog .postBody, section.blog h1, section.blog h3, section.blog .info, section.blog h2{
