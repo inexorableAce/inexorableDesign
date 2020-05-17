@@ -59,6 +59,9 @@ function getSinglePost(id){
                              '<div class="postBody">' + md.render(data.fields.body) + '</div>'
 
             blog.appendChild(post)
+            document.title = data.fields.title
+            document.querySelector('meta[name="description"]').setAttribute("content", data.fields.title);
+            document.querySelector('meta[property="og:description"]').setAttribute("content", data.fields.title);
         }
     };
     xmlhttp.open('GET', API_BASE_URL + '/spaces/' + API_SPACE_ID + '/entries/' + id + '?access_token=' + API_TOKEN + '&content_type=blog');
